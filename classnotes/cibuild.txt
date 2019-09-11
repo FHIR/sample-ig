@@ -1,0 +1,27 @@
+1. Log into your github.com (registering if necessary)
+2. Go to http://github.com/fhir/sample-ig
+3. Select "Fork" and fork to your local github repository
+4. In your forked github.com repository, go to "settings", "Webhooks"
+5. Select "Add webhook"
+- Set the payload URL to: https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger
+- Set the content-type to application/json
+- Leave the secret blank
+- Enable SSL verification
+- "Just the 'push' event"
+- Active
+- Click on "Add webhook"
+6. Log onto http://chat.fhir.org
+7. Subscribe to the committers/notification branch
+- Click on the little "gear" icon beside "Streams"
+- Select "All streams" and find "Committers/notification"
+- Subscribe to it
+
+If you clone your fork locally using Git and make changes, then commit and push them to your web repository
+OR if you make changes directly on your web repository, then
+a few minutes after your change in the notifications stream, you should see something like this:
+lmckenzi/sample-ig: master rebuilt
+Commit: Changed id (Lloyd McKenzie) :thumbs_up:
+Details: build logs | published | qa: broken links = 1, errors = 15, warn = 3, info = 0
+
+You can use the links to see the logs, published version and the qa
+
