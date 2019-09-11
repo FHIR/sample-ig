@@ -59,7 +59,7 @@
       <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>
