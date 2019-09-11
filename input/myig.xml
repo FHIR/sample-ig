@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
-  <id value="hl7.fhir.uv.myig"/>
-  <url value="http://hl7.org/fhir/uv/myig/ImplementationGuide/hl7.fhir.uv.myig"/>
+  <id value="example.fhir.uv.myig"/>
+  <url value="http://example.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig"/>
   <name value="YourComputableMyIGNameHere"/>
   <title value="Your User Friendly Name for MyIG Here"/>
   <status value="draft"/>
@@ -28,7 +28,7 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.uv.myig"/>
+  <packageId value="example.fhir.uv.myig"/>
   <!-- This is whatever FHIR version the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.0"/>
   <definition>
@@ -59,7 +59,7 @@
       <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>
