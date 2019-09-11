@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="myObservation"/>
+  <url value="http://example.org/fhir/uv/myig/StructureDefinition/myObservation"/>
+  <name value="MyObservation"/>
+  <title value="My Observation Profile"/>
+  <status value="draft"/>
+  <description value="A profile showing the use of XML to author profiles"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="85354-9"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="code"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <min value="2"/>
+      <max value="*"/>
+    </element>
+    <element id="Observation.component:Systolic">
+      <path value="Observation.component"/>
+      <sliceName value="Systolic"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Observation.component:Systolic.code">
+      <path value="Observation.component.code"/>
+      <short value="Systolic pressure"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="8480-6"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:Systolic.value[x]">
+      <path value="Observation.component.valueQuantity"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Observation.component:Systolic.value[x]:valueQuantity.value">
+      <path value="Observation.component.valueQuantity.value"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.component:Systolic.value[x]:valueQuantity.system">
+      <path value="Observation.component.valueQuantity.system"/>
+      <min value="1"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.component:Systolic.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code"/>
+      <min value="1"/>
+      <fixedCode value="mm[Hg]"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.component:Diastolic">
+      <path value="Observation.component"/>
+      <sliceName value="Diastolic"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Observation.component:Diastolic.code">
+      <path value="Observation.component.code"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="8462-4"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:Diastolic.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Observation.component:Diastolic.value[x]:valueQuantity.value">
+      <path value="Observation.component.valueQuantity.value"/>
+      <min value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.component:Diastolic.value[x]:valueQuantity.system">
+      <path value="Observation.component.valueQuantity.system"/>
+      <min value="1"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.component:Diastolic.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code"/>
+      <min value="1"/>
+      <fixedCode value="mm[Hg]"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
