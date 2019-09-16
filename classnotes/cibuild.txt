@@ -1,6 +1,6 @@
 1. Log into your github.com (registering if necessary)
 2. Go to http://github.com/fhir/sample-ig
-3. Select "Fork" and fork to your local github repository
+3. Select "Fork" and fork to your local github repository.  (Note that this must be a 'public' repository in order for it to publish using the CI Build)
 4. In your forked github.com repository, go to "settings", "Webhooks"
 5. Select "Add webhook"
 - Set the payload URL to: https://us-central1-fhir-org-starter-project.cloudfunctions.net/ig-commit-trigger
