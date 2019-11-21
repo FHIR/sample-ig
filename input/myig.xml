@@ -30,7 +30,7 @@
   </jurisdiction>
   <packageId value="example.fhir.uv.myig"/>
   <!-- This is whatever FHIR version the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
