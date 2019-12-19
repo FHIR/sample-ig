@@ -13,7 +13,7 @@ publisher="$input_cache_dir$publisher_jar"
 if test -f "$publisher"; then
 	echo "IG Publisher FOUND in input-cache"
 	jarlocation="$publisher"
-	jarlocationname=Input Cache
+	jarlocationname="Input Cache"
 	upgrade=true
 else
 	publisher="../$publisher_jar"
@@ -21,12 +21,12 @@ else
 	if test -f "$publisher"; then
 		echo "IG Publisher FOUND in parent folder"
 		jarlocation="$publisher"
-		jarlocationname=Input Cache
+		jarlocationname="Parent Folder"
 		upgrade=true
 	else
 		echo IG Publisher NOT FOUND in input-cache or parent folder...
 		jarlocation="$input_cache_dir$publisher_jar"
-		jarlocationname=Input Cache
+		jarlocationname="Input Cache"
 		upgrade=false
 	fi
 fi
