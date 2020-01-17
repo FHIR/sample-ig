@@ -7,20 +7,20 @@ FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
 
 IF NOT EXIST "%input_cache_path%%publisher_jar%" (
 	IF NOT EXIST "%upper_path%%publisher_jar%" (
-		SET jarlocation=%input_cache_path%%publisher_jar%
+		SET jarlocation="%input_cache_path%%publisher_jar%"
 		SET jarlocationname=Input Cache
 		ECHO IG Publisher is not yet in input-cache or parent folder.
 		REM we don't use jarlocation below because it will be empty because we're in a bracketed if statement
 		GOTO create
 	) ELSE (
 		ECHO IG Publisher FOUND in parent folder
-		SET jarlocation=%upper_path%%publisher_jar%
+		SET jarlocation="%upper_path%%publisher_jar%"
 		SET jarlocationname=Parent folder
 		GOTO:upgrade
 	)
 ) ELSE (
 	ECHO IG Publisher FOUND in input-cache
-	SET jarlocation=%input_cache_path%%publisher_jar%
+	SET jarlocation="%input_cache_path%%publisher_jar%"
 	SET jarlocationname=Input Cache
 	GOTO:upgrade
 )
