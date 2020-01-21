@@ -11,7 +11,7 @@
       "system" : "http://hl7.org/fhir/resource-types"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",

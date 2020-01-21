@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
   <id value="example"/>
-  <extension url="http://example.org/fhir/uv/myig/StructureDefinition/ext-myExtension">
+  <meta>
+    <profile value="http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient"/>
+  </meta>
+  <extension url="http://somewhere.org/fhir/uv/myig/StructureDefinition/ext-myExtension">
     <valueBoolean value="false"/>
   </extension>
   <name>
