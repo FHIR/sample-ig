@@ -9,7 +9,7 @@ if ! type "curl" > /dev/null; then
 	exit 1
 fi
 
-publisher="$input_cache_dir$publisher_jar"
+publisher="$input_cache_path$publisher_jar"
 if test -f "$publisher"; then
 	echo "IG Publisher FOUND in input-cache"
 	jarlocation="$publisher"
@@ -25,21 +25,21 @@ else
 		upgrade=true
 	else
 		echo IG Publisher NOT FOUND in input-cache or parent folder...
-		jarlocation="$input_cache_dir$publisher_jar"
+		jarlocation=$input_cache_path$publisher_jar
 		jarlocationname="Input Cache"
 		upgrade=false
 	fi
 fi
 
-if $upgrade ; then
-	message="Overwrite $jarlocation? [Y/N] "
+if "$upgrade"; then
+	message="Overwrite $jarlocation?"
 else
-	echo Will place publisher jar here: $input_cache_path$publisher_jar
-	message="Ok? [Y/N] "
+	echo Will place publisher jar here: "$jarlocation"
+	message="Ok?"
 fi
 
-read -r -p $message response
-if [[ "$response" =~ ^([yY])$ ]] then
+read -r -p "$message" response
+if [[ "$response" =~ ^([yY])$ ]]; then
 	echo "Downloading most recent publisher to $jarlocationname - it's ~100 MB, so this may take a bit"
 #	wget "https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar" -O "$jarlocation" 
 	curl $dlurl -o "$jarlocation" --create-dirs
