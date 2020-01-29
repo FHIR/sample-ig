@@ -55,12 +55,12 @@ ECHO Unrecognized version: %version%
 GOTO done
 
 :win10
-POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%dlurl%\",\"%jarlocation%\") } else { Invoke-WebRequest -Uri "%dlurl%" -Outfile "%jarlocation%" }
+CALL POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%dlurl%\",\"%jarlocation%\") } else { Invoke-WebRequest -Uri "%dlurl%" -Outfile "%jarlocation%" }
 
 GOTO done
 
 :win7
-bitsadmin /transfer GetPublisher /download /priority normal "%dlurl%" "%jarlocation%"
+CALL bitsadmin /transfer GetPublisher /download /priority normal "%dlurl%" "%jarlocation%"
 GOTO done
 
 :win8.1
