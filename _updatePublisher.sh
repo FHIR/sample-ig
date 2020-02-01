@@ -35,7 +35,7 @@ if "$upgrade"; then
 	message="Overwrite $jarlocation?"
 else
 	echo Will place publisher jar here: "$jarlocation"
-	message="Ok?"
+	message="Ok (enter 'y' or 'Y' to continue, any other key to cancel) ?"
 fi
 
 read -r -p "$message" response
