@@ -1,2 +1,2 @@
 #!/bin/bash
-_genonce.sh -watch
+./_genonce.sh -watch
