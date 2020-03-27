@@ -3,13 +3,14 @@ SET dlurl=https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar
 SET publisher_jar=org.hl7.fhir.publisher.jar
 SET input_cache_path=%CD%\input-cache\
 
-set update_bat_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_updatePublisher.bat
-set gen_bat_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_genonce.bat
-set gencont_bat_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_gencontinuous.bat
+set update_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.bat
+set gen_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.bat
+set gencont_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.bat
 
-set gencont_sh_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_gencontinuous.sh
-set gen_sh_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_genonce.sh
-set update_sh_url=https://raw.githubusercontent.com/HL7/ig-template-base/master/launch/_updatePublisher.sh
+set gencont_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.sh
+set gen_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh
+set update_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh
+
 
 
 FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
@@ -81,20 +82,20 @@ GOTO done
 :done
 
 REM Download all batch files (and this one with a new name)
+ECHO Updating this file...
+
 SETLOCAL DisableDelayedExpansion
 
+REM ==== For getting the sources online...
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%update_bat_url%\",\"_updatePublisher.new.bat\") } else { Invoke-WebRequest -Uri "%update_bat_url%" -Outfile "_updatePublisher.new.bat" }
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gen_bat_url%\",\"_genonce.bat\") } else { Invoke-WebRequest -Uri "%gen_bat_url%" -Outfile "_genonce.bat" }
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gencont_bat_url%\",\"_gencontinuous.bat\") } else { Invoke-WebRequest -Uri "%gencont_bat_url%" -Outfile "_gencontinuous.bat" }
 
-POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%update_sh_url%\",\"_updatePublisher.sh\") } else { Invoke-WebRequest -Uri "%update_sh_url%" -Outfile "_updatePublisher.sh" }
+POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%update_sh_url%\",\"_updatePublisher.sh\") } else { Invoke-WebRequest -Uri "%update_sh_url%" -Outfile "_updatePublisher.new.sh" }
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gen_sh_url%\",\"_genonce.sh\") } else { Invoke-WebRequest -Uri "%gen_sh_url%" -Outfile "_genonce.sh" }
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gencont_sh_url%\",\"_gencontinuous.sh\") } else { Invoke-WebRequest -Uri "%gencont_sh_url%" -Outfile "_gencontinuous.sh" }
 
-
-REM update this file from the downloaded copy
-ECHO Updating this file...
 start copy /y "_updatePublisher.new.bat" "_updatePublisher.bat" ^&^& del "_updatePublisher.new.bat" ^&^& exit
-
+REM ============================
 
 PAUSE
