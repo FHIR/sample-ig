@@ -2,15 +2,18 @@
 SET dlurl=https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar
 SET publisher_jar=org.hl7.fhir.publisher.jar
 SET input_cache_path=%CD%\input-cache\
+SET skipPrompts=false
 
 set update_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.bat
 set gen_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.bat
 set gencont_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.bat
-
 set gencont_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.sh
 set gen_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.sh
 set update_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.sh
 
+IF "%~1"=="/f" SET skipPrompts=true
+
+ECHO "%skipPrompts%"
 
 
 FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
@@ -37,18 +40,27 @@ IF NOT EXIST "%input_cache_path%%publisher_jar%" (
 
 :create
 ECHO Will place publisher jar here: %input_cache_path%%publisher_jar%
-SET /p create="Ok? (Y/N) "
-IF /I "%create%"=="Y" (
+IF "%skipPrompts%"=="true" (
+	SET create="Y"
+	) ELSE (
+	SET /p create="Ok? (Y/N) "
+	)
+IF /I %create%=="Y" (
 	MKDIR "%input_cache_path%" 2> NUL
 	GOTO:download
-)
+	)
 GOTO:done
 
 :upgrade
-SET /p overwrite="Overwrite %jarlocation%? (Y/N) "
-IF /I "%overwrite%"=="Y" (
+IF "%skipPrompts%"=="true" (
+	SET overwrite="Y"
+	) ELSE (
+	SET /p overwrite="Overwrite %jarlocation%? (Y/N) "
+	)
+
+IF /I %overwrite%=="Y" (
 	GOTO:download
-)
+	)
 GOTO:done
 
 :download
@@ -82,7 +94,6 @@ GOTO done
 :done
 
 REM Download all batch files (and this one with a new name)
-ECHO Updating this file...
 
 SETLOCAL DisableDelayedExpansion
 
@@ -95,6 +106,7 @@ POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.N
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gen_sh_url%\",\"_genonce.sh\") } else { Invoke-WebRequest -Uri "%gen_sh_url%" -Outfile "_genonce.sh" }
 POWERSHELL -command if ('System.Net.WebClient' -as [type]) {(new-object System.Net.WebClient).DownloadFile(\"%gencont_sh_url%\",\"_gencontinuous.sh\") } else { Invoke-WebRequest -Uri "%gencont_sh_url%" -Outfile "_gencontinuous.sh" }
 
+ECHO Updating this file...
 start copy /y "_updatePublisher.new.bat" "_updatePublisher.bat" ^&^& del "_updatePublisher.new.bat" ^&^& exit
 REM ============================
 
