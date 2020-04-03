@@ -50,7 +50,7 @@ if [[ "$FORCE" != true ]]; then
     message="Overwrite $jarlocation? (Y/N) "
   else
     echo Will place publisher jar here: "$jarlocation"
-    message="Ok? (Y/N) "
+    message="Ok (enter 'y' or 'Y' to continue, any other key to cancel)?"
   fi
   read -r -p "$message" response
 fi
