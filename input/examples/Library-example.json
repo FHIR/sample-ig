@@ -7,8 +7,9 @@
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/library-type",
       "code" : "logic-library"
-  ]},
+    }]
+  },
   "content" : [{
-    "id" : "ig-loader-binary.cql"
+    "id" : "ig-loader-example.cql"
   }]
 }
