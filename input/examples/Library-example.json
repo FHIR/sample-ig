@@ -1,15 +1,14 @@
 {
   "resourceType" : "Library",
-  "url" : "http://somewhere.org/fhir/uv/myig/Library/example", 
-  "version" : "1.0.0", 
-  "status" : "draft", 
-  "type" : { 
+  "url" : "http://somewhere.org/fhir/uv/myig/Library/example",
+  "version" : "1.0.0",
+  "status" : "draft",
+  "type" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/library-type",
       "code" : "logic-library"
-    ]}
-  },
-  "content" : [{ 
+  ]},
+  "content" : [{
     "id" : "ig-loader-binary.cql"
   }]
 }
