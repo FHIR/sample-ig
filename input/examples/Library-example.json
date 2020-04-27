@@ -1,5 +1,6 @@
 {
   "resourceType" : "Library",
+  "id": "example",
   "url" : "http://somewhere.org/fhir/uv/myig/Library/example",
   "version" : "1.0.0",
   "status" : "draft",

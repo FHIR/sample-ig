@@ -1,0 +1,146 @@
+<div>
+    <table class="grid dict">
+        {% if Library.id.exists()}
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 25px;">{{Library.id}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.version.exists()}
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 25px;">{{Library.version}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.name.exists()}
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 25px;">{{Library.name}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.title.exists()}
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 25px;">{{Library.title}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.status.exists()}
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 25px;">{{Library.status.value}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.type.exists()}
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 25px;">
+                {% if Library.type.coding.exists() %}
+                    {% loop coding in Library.type.coding %}
+                        {% if coding.system.exists() %}
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span>{{coding.system}}</span>
+                        </p>
+                        {% endif %}
+                        {% if coding.code.exists() %}
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>{{coding.code}}</span>
+                        </p>
+                        {% endif %}
+                        {% if coding.display.exists() %}
+                        <p style="margin-bottom: 5px;">
+                            <b>display: </b> <span>{{coding.display}}</span>
+                        </p>
+                        {% endif %}
+                    {% endloop %}
+                {% elseif Library.type.text.exists() %}
+                    {{Library.type.text}}
+                {% endif %}
+            </td>
+        </tr>
+        {% endif %}
+        {% if Library.publisher.exists()}
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 25px;">{{Library.publisher}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.description.exists()}
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 25px;">{{Library.description}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.purpose.exists()}
+        <tr>
+            <th scope="row"><b>Purpose: </b></th>
+            <td style="padding-left: 25px;">{{Library.purpose}}</td>
+        </tr>
+        {% endif %}
+        {% if Library.usage.exists()}
+        <tr>
+            <th scope="row"><b>Usage: </b></th>
+            <td style="padding-left: 25px;">{{Library.usage}}</td>
+        </tr>
+        {% endif %}
+        {% loop artifact in Library.relatedArtifact %}
+        <tr>
+            <th scope="row"><b>Related Artifact: </b></th>
+            <td style="padding-left: 25px;">
+                {% if artifact.type.exists()}
+                <p style="margin-bottom: 5px;">
+                    <b>type: </b> <span>{{artifact.type.value}}</span>
+                </p>
+                {% endif %}
+                {% if artifact.resource.exists()}
+                <p style="margin-bottom: 5px;">
+                    <b>resource: </b> <span>{{artifact.resource}}</span>
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        {% endloop %}
+        {% loop requirement in Library.dataRequirement %}
+        <tr>
+            <th scope="row"><b>Data Requirement: </b></th>
+            <td style="padding-left: 25px;">
+                {% if requirement.type.exists()}
+                <p style="margin-bottom: 5px;">
+                    <b>type: </b> <span>{{requirement.type.value}}</span>
+                </p>
+                {% endif %}
+                {% loop profile in requirement.profile}
+                <p style="margin-bottom: 5px;">
+                    <b>profile: </b> <span>{{profile.value}}</span>
+                </p>
+                {% endloop %}
+                {% loop support in requirement.mustSupport}
+                <p style="margin-bottom: 5px;">
+                    <b>mustSupport: </b> <span>{{support}}</span>
+                </p>
+                {% endloop %}
+                {% loop cfilter requirement.codeFilter}
+                <p style="margin-bottom: 5px;">
+                    <b>code filter: </b>
+                    {% if cfilter.path.exists() or cfilter.valueSet.exists()}
+                    <br/>
+                    {% endif %}
+                    {% if cfilter.path.exists()}
+                    <span style="padding-left: 25px;">
+                        <b>path: </b><span>{{cfilter.path}}</span>
+                    </span>
+                    {% if cfilter.valueSet.exists()}
+                    <br/>
+                    {% endif %}
+                    {% endif %}
+                    {% if cfilter.valueSet.exists()}
+                    <span style="padding-left: 25px;">
+                        <b>value set: </b><span>{{cfilter.valueSet.value}}</span>
+                    </span>
+                    {% endif %}
+                </p>
+                {% endloop %}
+            </td>
+        </tr>
+        {% endloop %}
+    </table>
+</div>
