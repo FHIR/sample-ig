@@ -7,7 +7,7 @@ SET publisher_jar=org.hl7.fhir.publisher.jar
 SET input_cache_path=%CD%\input-cache\
 SET skipPrompts=false
 
-set update_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updatePublisher.bat
+set update_bat_url=https://raw.githubusercontent.com/costateixeira/sample-ig/self-updating-scripts/_updatePublisher.bat
 set gen_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_genonce.bat
 set gencont_bat_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.bat
 set gencont_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_gencontinuous.sh
