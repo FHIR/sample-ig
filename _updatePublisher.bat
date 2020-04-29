@@ -168,7 +168,7 @@ echo "Errors encountered during execution.  Exited with status: %errorlevel%"
 goto end
 :next
 ECHO Updating this file...
-start copy /y "_updatePublisher.new.bat" "_updatePublisher2.bat" ^&^& del "_updatePublisher.new.bat" ^&^& exit
+start copy /y "_updatePublisher.new.bat" "_updatePublisher.bat" ^&^& del "_updatePublisher.new.bat" ^&^& exit
 REM ============================
 
 :end
