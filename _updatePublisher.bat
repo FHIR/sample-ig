@@ -1,5 +1,8 @@
 @ECHO OFF
-SET dlurl=https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.publisher.jar
+
+SETLOCAL
+
+SET dlurl=https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar
 SET publisher_jar=org.hl7.fhir.publisher.jar
 SET input_cache_path=%CD%\input-cache\
 SET skipPrompts=false
@@ -15,6 +18,15 @@ IF "%~1"=="/f" SET skipPrompts=true
 
 ECHO "%skipPrompts%"
 
+
+:processflags
+SET ARG=%1
+IF DEFINED ARG (
+	IF "%ARG%"=="-f" SET FORCE=true
+	IF "%ARG%"=="--force" SET FORCE=true
+	SHIFT
+	GOTO processflags
+)
 
 FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
 
@@ -39,28 +51,32 @@ IF NOT EXIST "%input_cache_path%%publisher_jar%" (
 )
 
 :create
+IF DEFINED FORCE (
+	MKDIR "%input_cache_path%" 2> NUL
+	GOTO:download
+)
 ECHO Will place publisher jar here: %input_cache_path%%publisher_jar%
 IF "%skipPrompts%"=="true" (
 	SET create="Y"
-	) ELSE (
+) ELSE (
 	SET /p create="Ok? (Y/N) "
-	)
+)
 IF /I %create%=="Y" (
 	MKDIR "%input_cache_path%" 2> NUL
 	GOTO:download
-	)
+)
 GOTO:done
 
 :upgrade
 IF "%skipPrompts%"=="true" (
 	SET overwrite="Y"
-	) ELSE (
+) ELSE (
 	SET /p overwrite="Overwrite %jarlocation%? (Y/N) "
-	)
+)
 
 IF /I %overwrite%=="Y" (
 	GOTO:download
-	)
+)
 GOTO:done
 
 :download
@@ -110,4 +126,6 @@ ECHO Updating this file...
 start copy /y "_updatePublisher.new.bat" "_updatePublisher.bat" ^&^& del "_updatePublisher.new.bat" ^&^& exit
 REM ============================
 
-PAUSE
+IF "%skipPrompts%"=="true" (
+  PAUSE
+}

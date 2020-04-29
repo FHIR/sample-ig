@@ -38,6 +38,11 @@
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
+ <!-- <dependsOn>
+    <uri value="http://somethign"/>
+    <packageId value="de.basisprofil.r4"/>
+    <version value="0.9.2"/>
+  </dependsOn> -->
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
@@ -47,6 +52,11 @@
       </reference>
       <description value="Overriding description because we can"/>
     </resource>
+<!--<resource>
+<reference>
+<reference value="MyLogicalModel/AS"/>
+</reference>
+</resource> -->
     <resource>
       <reference>
         <reference value="Patient/example"/>
@@ -55,6 +65,19 @@
       <description value="A simple example showing how examples are defined and referenced"/>
       <exampleCanonical value="http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/h1"/>
+      </reference>
+      <name value="History"/>
+    </resource>
+<!--    <resource>
+      <reference>
+        <reference value="Library/example"/>
+      </reference>
+      <name value="Simple library example"/>
+      <description value="A simple example showing how library is pre-loaded"/>
+    </resource> -->
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -99,6 +122,14 @@
     <parameter>
       <code value="find-other-resources"/>
       <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <parameter>
+      <code value="path-binary"/>
+      <value value="input\cql"/>
     </parameter>
 <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
