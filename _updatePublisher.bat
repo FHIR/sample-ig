@@ -17,6 +17,7 @@ set update_sh_url=https://raw.githubusercontent.com/FHIR/sample-ig/master/_updat
 IF "%~1"=="/f" SET skipPrompts=true
 
 
+ECHO.
 ECHO Checking internet connection...
 PING tx.fhir.org -n 1 -w 1000 | FINDSTR TTL && GOTO isonline
 ECHO We're offline, nothing to do...
@@ -37,6 +38,7 @@ IF DEFINED ARG (
 
 FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
 
+ECHO.
 IF NOT EXIST "%input_cache_path%%publisher_jar%" (
 	IF NOT EXIST "%upper_path%%publisher_jar%" (
 		SET jarlocation="%input_cache_path%%publisher_jar%"
@@ -128,7 +130,8 @@ GOTO done
 
 
 
-ECHO Will place publisher jar here: %input_cache_path%%publisher_jar%
+ECHO.
+ECHO Updating scripts
 IF "%skipPrompts%"=="true" (
 	SET updateScripts="Y"
 ) ELSE (
