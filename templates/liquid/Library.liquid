@@ -291,7 +291,7 @@
         <tr>
           <table>
             <tr><th><b>Content: </b> {{c.contentType}}</th></tr>
-            <tr><pre><code>{{c.data.fromBase64()}}</code></pre></tr>
+            <tr><pre><code>{{c.data.fromBase64().escape('html')}}</code></pre></tr>
           </table>
         </tr>
         {% endif %}
