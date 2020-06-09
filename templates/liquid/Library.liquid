@@ -18,7 +18,7 @@
             <td style="padding-left: 25px;">{{Library.version}}</td>
         </tr>
         {% endif %}
-        {% for identifier in Library %}
+        {% for identifier in Library.identifier %}
         <tr>
             <th scope="row"><b>Identifier: </b></th>
             <td style="padding-left: 25px;">
@@ -291,7 +291,15 @@
         <tr>
           <table>
             <tr><th><b>Content: </b> {{c.contentType}}</th></tr>
-            <tr><pre><code>{{c.data.decode('base64').escape('html')}}</code></pre></tr>
+            <tr><td><pre><code>{{c.data.decode('base64').escape('html')}}</code></pre></td></tr>
+          </table>
+        </tr>
+        {% endif %}
+        {% if c.contentType != 'text/cql' %}
+        <tr>
+          <table>
+            <tr><th><b>Content: </b> {{c.contentType}}</th></tr>
+            <tr><td><pre><code>{{'Encoded data (' + c.data.length().toString() + ' characters)'}}</code></pre></td></tr>
           </table>
         </tr>
         {% endif %}
