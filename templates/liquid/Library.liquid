@@ -96,7 +96,7 @@
         {% endif %}
         {% if Library.subject.exists() %}
         <tr>
-            <th scope="row"><b>Type: </b></th>
+            <th scope="row"><b>Subject: </b></th>
             {%if Library.subject is CodeableConcept %}
             <td style="padding-left: 25px;">
                 {% if Library.subject.coding.exists() %}
@@ -261,14 +261,14 @@
                     {% for cfilter in requirement.codeFilter %}
                     <p style="margin-bottom: 5px;">
                         <b>code filter: </b>
-                        {% if cfilter.path.exists() or cfilter.valueSet.exists() %}
+                        {% if cfilter.path.exists() or cfilter.valueSet.exists() or cfilter.code.exists() %}
                         <br/>
                         {% endif %}
                         {% if cfilter.path.exists() %}
                         <span style="padding-left: 25px;">
                             <b>path: </b><span>{{cfilter.path}}</span>
                         </span>
-                        {% if cfilter.valueSet.exists() %}
+                        {% if cfilter.valueSet.exists() or cfilter.code.exists() %}
                         <br/>
                         {% endif %}
                         {% endif %}
@@ -277,6 +277,23 @@
                             <b>value set: </b><span>{{cfilter.valueSet.value}}</span>
                         </span>
                         {% endif %}
+                        {% for coding in cfilter.code %}
+                            {% if coding.system.exists() %}
+                            <p style="margin-bottom: 5px;">
+                                <b>system: </b> <span>{{coding.system}}</span>
+                            </p>
+                            {% endif %}
+                            {% if coding.code.exists() %}
+                            <p style="margin-bottom: 5px;">
+                                <b>code: </b> <span>{{coding.code}}</span>
+                            </p>
+                            {% endif %}
+                            {% if coding.display.exists() %}
+                            <p style="margin-bottom: 5px;">
+                                <b>display: </b> <span>{{coding.display}}</span>
+                            </p>
+                            {% endif %}
+                        {% endfor %}
                     </p>
                     {% endfor %}
                   </th>
