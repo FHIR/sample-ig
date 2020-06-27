@@ -148,5 +148,9 @@
       <code value="excludemap"/>
       <value value="true"/>
     </parameter>-->
+    <parameter>
+      <code value="showsource"/>
+      <value value="true"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
