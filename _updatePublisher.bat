@@ -19,7 +19,7 @@ IF "%~1"=="/f" SET skipPrompts=true
 
 ECHO.
 ECHO Checking internet connection...
-PING tx.fhir.org -n 1 -w 1000 | FINDSTR TTL && GOTO isonline
+PING tx.fhir.org -4 -n 1 -w 1000 | FINDSTR TTL && GOTO isonline
 ECHO We're offline, nothing to do...
 GOTO end
 
