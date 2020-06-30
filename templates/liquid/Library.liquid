@@ -307,7 +307,7 @@
         {% if c.contentType = 'text/cql' %}
         <tr>
           <table>
-            <tr><th><b>Content: </b> {{c.contentType}}</th></tr>
+            <tr><th><a id="cql-content"><b>Content: </b></a> {{c.contentType}}</th></tr>
             <tr><td><pre><code>{{c.data.decode('base64').escape('html')}}</code></pre></td></tr>
           </table>
         </tr>
