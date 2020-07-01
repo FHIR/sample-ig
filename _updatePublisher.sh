@@ -1,5 +1,5 @@
 #!/bin/bash
-dlurl=https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar
+dlurl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 publisher_jar=org.hl7.fhir.publisher.jar
 input_cache_path=./input-cache/
 
