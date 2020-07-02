@@ -1,6 +1,6 @@
 #!/bin/bash
 dlurl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-publisher_jar=org.hl7.fhir.publisher.jar
+publisher_jar=publisher.jar
 input_cache_path=./input-cache/
 
 set -e
