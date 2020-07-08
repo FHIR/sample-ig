@@ -2,8 +2,8 @@
 
 SETLOCAL
 
-SET dlurl=https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar
-SET publisher_jar=org.hl7.fhir.publisher.jar
+SET dlurl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+SET publisher_jar=publisher.jar
 SET input_cache_path=%CD%\input-cache\
 SET skipPrompts=false
 

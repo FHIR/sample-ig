@@ -1,5 +1,5 @@
 @ECHO OFF
-SET publisher_jar=org.hl7.fhir.publisher.jar
+SET publisher_jar=publisher.jar
 SET input_cache_path=%CD%\input-cache
 
 ECHO Checking internet connection...
