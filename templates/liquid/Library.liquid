@@ -167,11 +167,12 @@
             <th scope="row"><b>Use Context: </b></th>
             <td style="padding-left: 25px;">
                 <table class="grid-dict">
-                    <tr><th><b>code</b></th><th><b>value</b></th></tr>
+                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>
                     {% for useContext in Library.useContext %}
                       <tr>
                         <td>{{useContext.code.code}}</td>
                         <td>{{(useContext.value as CodeableConcept).coding.first().code}}</td>
+                        <td>{{(useContext.value as CodeableConcept).coding.first().display}}</td>
                       </tr>
                     {% endfor %}
                 </table>
@@ -224,12 +225,54 @@
         <tr>
           <th scope="row"><b>Related Artifacts: </b></th>
           <td style="padding-left: 25px;">
+            {% if Library.relatedArtifact.where(type = 'documentation' or type = 'justification').exists() %}
+            <p><b>Documentation</b><br/>
+            <ul>
+              {% for artifact in Library.relatedArtifact.where(type = 'documentation' or type = 'justification') %}
+                <li><a href="{{artifact.url}}">{{artifact.display}}</a></li>
+              {% endfor %}
+            </ul>
+            </p>
+            {% endif %}
+            {% if Library.relatedArtifact.where(type = 'citation').exists() %}
+            <p><b>References</b><br/>
+            <ul>
+              {% for artifact in Library.relatedArtifact.where(type = 'citation') %}
+                <li>{{artifact.citation}}<br/><a href="{{artifact.url}}">{{artifact.url}}</a></li>
+              {% endfor %}
+            </ul>
+            </p>
+            {% endif %}
+            {% if Library.relatedArtifact.where(type = 'derived-from').exists() %}
+            <p><b>Dependencies</b><br/>
             <table class="grid-dict">
               <tr><th><b>Type</b></th><th><b>Resource</b></th></tr>
-              {% for artifact in Library.relatedArtifact %}
+              {% for artifact in Library.relatedArtifact.where(type = 'derived-from') %}
                 <tr><td>{{artifact.type.value}}</td><td>{{artifact.resource}}</td></tr>
               {% endfor %}
             </table>
+            </p>
+            {% endif %}
+            {% if Library.relatedArtifact.where(type = 'composed-of').exists() %}
+            <p><b>Components</b><br/>
+            <table class="grid-dict">
+              <tr><th><b>Type</b></th><th><b>Resource</b></th></tr>
+              {% for artifact in Library.relatedArtifact.where(type = 'composed-of') %}
+                <tr><td>{{artifact.type.value}}</td><td>{{artifact.resource}}</td></tr>
+              {% endfor %}
+            </table>
+            </p>
+            {% endif %}
+            {% if Library.relatedArtifact.where(type = 'successor' or type = 'predecessor').exists() %}
+            <p><b>Successors/Predecessors:</b><br/>
+            <table class="grid-dict">
+              <tr><th><b>Type</b></th><th><b>Resource</b></th></tr>
+              {% for artifact in Library.relatedArtifact.where(type = 'successor' or type = 'predecessor') %}
+                <tr><td>{{artifact.type.value}}</td><td>{{artifact.resource}}</td></tr>
+              {% endfor %}
+            </table>
+            </p>
+            {% endif %}
           </td>
         </tr>
         {% endif %}
