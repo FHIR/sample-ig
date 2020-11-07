@@ -13,6 +13,23 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
   <derivation value="constraint"/>
   <differential>
+    <element id="Observation.basedOn">
+      <path value="Observation.basedOn"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.partOf">
+      <path value="Observation.partOf"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure">
+          <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+            <valueBoolean value="true"/>
+          </extension>
+        </targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
       <patternCodeableConcept>
@@ -21,6 +38,35 @@
           <code value="85354-9"/>
         </coding>
       </patternCodeableConcept>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient">
+          <!-- this is an error - it is meaningless unless the element itself is must-support -->
+          <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+            <valueBoolean value="true"/>
+          </extension>
+        </targetProfile>
+      </type>
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
+          <valueBoolean value="true"/>
+        </extension>
+        <code value="Quantity"/>
+      </type>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.component">
       <path value="Observation.component"/>
