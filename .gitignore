@@ -7,6 +7,7 @@ output
 # Don't commit this because it's so large #
 ###########################################
 /input-cache/org.hl7.fhir.publisher.jar
+/input-cache/publisher.jar
 
 # Windows generated files #
 ###########################
