@@ -3,17 +3,18 @@
   "id": "example",
   "url" : "http://somewhere.org/fhir/uv/myig/Library/example",
   "version" : "1.0.0",
-  "name": "example",
+  "name": "Example",
   "title": "Example CQL Library",
   "status" : "draft",
   "experimental": true,
+  "description": "Some example library",
   "type" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/library-type",
       "code" : "logic-library"
     }]
   },
-  "subject": {
+  "subjectCodeableConcept": {
     "coding": [{
       "system": "hl7.org/fhir/resource-types",
       "code": "Patient"

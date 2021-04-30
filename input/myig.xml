@@ -38,11 +38,11 @@
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
-  <dependsOn>
+<!--  <dependsOn>
     <uri value="https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.fall/0.9.1/files/131317"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.fall"/>
     <version value="0.9.1"/>
-  </dependsOn>
+  </dependsOn>-->
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
@@ -76,6 +76,13 @@
       <name value="Simple patient example"/>
       <description value="A simple example showing how examples are defined and referenced"/>
       <exampleCanonical value="http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Binary/example"/>
+      </reference>
+      <name value="Example binary"/>
+      <description value="Example showing binary content"/>
     </resource>
     <resource>
       <reference>

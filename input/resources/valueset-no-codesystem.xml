@@ -1,20 +1,22 @@
-<ValueSet xmlns="http://hl7.org/fhir">
-  <id value="valueset-no-codesystem"/> 
-  <url value="http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem"/> 
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="valueset-no-codesystem"/>
+  <url value="http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem"/>
   <name value="ValueSetWithNoCodeSystem"/>
-  <status value="draft"/> 
-  <experimental value="true"/> 
-  <date value="2015-06-22"/> 
-  <compose> 
-    <include> 
-      <system value="http://not-a-known-code-system"/> 
-      <version value="2.36"/> 
-      <concept> 
-        <code value="not-known-code"/> 
-      </concept> 
-      <concept> 
-        <code value="not-known-code"/> 
-      </concept> 
-    </include> 
-  </compose> 
-</ValueSet> 
+  <title value="ValueSet with no code-system"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2015-06-22"/>
+  <compose>
+    <include>
+      <system value="http://not-a-known-code-system"/>
+      <version value="2.36"/>
+      <concept>
+        <code value="not-known-code"/>
+      </concept>
+      <concept>
+        <code value="not-known-code2"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
