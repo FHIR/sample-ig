@@ -7,6 +7,7 @@
   <status value="draft"/>
   <experimental value="true"/>
   <date value="2015-06-22"/>
+  <description value="A sample value set where there's no known code system"/>
   <compose>
     <include>
       <system value="http://not-a-known-code-system"/>
