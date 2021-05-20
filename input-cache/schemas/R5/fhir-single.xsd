@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 14, 2021 05:30+0000 for FHIR v4.6.0 
+  Generated on Tue, May 18, 2021 21:19+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -442,6 +442,7 @@
       <xs:element ref="DetectedIssue"/>
       <xs:element ref="Device"/>
       <xs:element ref="DeviceDefinition"/>
+      <xs:element ref="DeviceDispense"/>
       <xs:element ref="DeviceMetric"/>
       <xs:element ref="DeviceRequest"/>
       <xs:element ref="DeviceUsage"/>
@@ -16105,7 +16106,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The patient/healthcare practitioner to whom this consent applies.</xs:documentation>
+              <xs:documentation xml:lang="en">The patient/healthcare practitioner or group of persons to whom this consent applies.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dateTime" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -16113,9 +16114,14 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Date and time the consent instance was agreed to.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="performer" minOccurs="0" maxOccurs="unbounded" type="Reference">
+          <xs:element name="grantor" minOccurs="0" maxOccurs="unbounded" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Either the Grantor, which is the entity responsible for granting the rights listed in a Consent Directive or the Grantee, which is the entity responsible for complying with the Consent Directive, including any obligations or limitations on authorizations and enforcement of prohibitions.</xs:documentation>
+              <xs:documentation xml:lang="en">The entity responsible for granting the rights listed in a Consent Directive.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="grantee" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The entity responsible for complying with the Consent Directive, including any obligations or limitations on authorizations and enforcement of prohibitions.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="manager" minOccurs="0" maxOccurs="unbounded" type="Reference">
@@ -16276,6 +16282,11 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">The resources controlled by this rule if specific resources are referenced.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="expression" minOccurs="0" maxOccurs="1" type="Expression">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A computable (FHIRPath or other) definition of what is controlled by this consent.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="provision" type="Consent.Provision" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">Rules which provide exceptions to the base rule or subrules.</xs:documentation>
@@ -16292,7 +16303,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="role" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="role" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">How the individual is involved in the resources content that is described in the exception.</xs:documentation>
            </xs:annotation>
@@ -19296,6 +19307,144 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           <xs:element name="allergenicIndicator" minOccurs="0" maxOccurs="1" type="boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en">Whether the substance is a known or suspected allergen.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceDispense" type="DeviceDispense">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A record of dispensation of a device.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="DeviceDispense">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A record of dispensation of a device.</xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="DomainResource">
+        <xs:sequence>
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Business identifier for this dispensation.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The order or request that this dispense is fulfilling.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The bigger event that this dispense is a part of.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="status" minOccurs="1" maxOccurs="1" type="code">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A code specifying the state of the set of dispense events.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="statusReason" minOccurs="0" maxOccurs="1" type="CodeableReference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the reason why a dispense was or was not performed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="category" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the type of device dispense.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="device" minOccurs="1" maxOccurs="1" type="CodeableReference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identifies the device being dispensed. This is either a link to a resource representing the details of the device or a simple attribute carrying a code that identifies the device from a known list of devices.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A link to a resource representing the person to whom the device is intended.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="encounter" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The encounter that establishes the context for this event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="supportingInformation" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Additional information that supports the device being dispensed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="performer" type="DeviceDispense.Performer" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates who or what performed the event.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="location" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The principal physical location where the dispense was performed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Indicates the type of dispensing event that is performed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The number of devices that have been dispensed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="preparedDate" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The time when the dispensed product was packaged and reviewed.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="whenHandedOver" minOccurs="0" maxOccurs="1" type="dateTime">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The time the dispensed product was made available to the patient or their representative.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="destination" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Identification of the facility/location where the device was /should be shipped to, as part of the dispense process.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="note" minOccurs="0" maxOccurs="unbounded" type="Annotation">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Extra information about the dispense that could not be conveyed in the other attributes.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="usageInstruction" minOccurs="0" maxOccurs="1" type="string">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The full representation of the instructions.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="eventHistory" minOccurs="0" maxOccurs="unbounded" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">A summary of the events of interest that have occurred, such as when the dispense was verified.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="DeviceDispense.Performer">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">A record of dispensation of a device.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="function" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Distinguishes the type of performer in the dispense.  For example, date enterer, packager, final checker.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="actor" minOccurs="1" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The device, practitioner, etc. who performed the action.  It should be assumed that the actor is the dispenser of the device.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -31173,6 +31322,14 @@ description of the substance according to standardised sets of properties.</xs:d
           <xs:documentation xml:lang="zh">装置组件</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="DeviceDispense">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">DeviceDispense</xs:documentation>
+          <xs:documentation xml:lang="en">DeviceDispense</xs:documentation>
+          <xs:documentation xml:lang="fr">DispensationDeDispositif</xs:documentation>
+          <xs:documentation xml:lang="es">DispensaciónDeDispositivo</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="DeviceMetric">
         <xs:annotation>
           <xs:documentation xml:lang="en">DeviceMetric</xs:documentation>
@@ -32890,7 +33047,7 @@ description of the substance according to standardised sets of properties.</xs:d
           </xs:element>
           <xs:element name="medication" minOccurs="1" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.</xs:documentation>
+              <xs:documentation xml:lang="en">Identifies the medication supplied. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="subject" minOccurs="1" maxOccurs="1" type="Reference">
@@ -33127,9 +33284,9 @@ description of the substance according to standardised sets of properties.</xs:d
               <xs:documentation xml:lang="en">A code that specifies this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="status" minOccurs="0" maxOccurs="1" type="code">
+          <xs:element name="status" minOccurs="0" maxOccurs="1" type="MedicationKnowledgeStatusCodes">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A code to indicate if the medication is in active use.  The status refers to the validity about the information of the medication and not to its medicinal properties.</xs:documentation>
+              <xs:documentation xml:lang="en">A code to indicate if the medication referred to by this MedicationKnowledge is in active use within the drug database or inventory system. The status refers to the validity about the information of the medication and not to its medicinal properties.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="author" minOccurs="0" maxOccurs="1" type="Reference">
@@ -33501,12 +33658,12 @@ description of the substance according to standardised sets of properties.</xs:d
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="identifier" minOccurs="0" maxOccurs="1" type="Identifier">
+          <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
               <xs:documentation xml:lang="en">The business identifier of the packaged medication.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="cost" type="MedicationKnowledge.Cost" minOccurs="0" maxOccurs="1">
+          <xs:element name="cost" type="MedicationKnowledge.Cost" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="en">The cost of the packaged medication.</xs:documentation>
            </xs:annotation>
@@ -33659,6 +33816,36 @@ description of the substance according to standardised sets of properties.</xs:d
             <xs:element name="valueDuration" type="Duration"/>
           </xs:choice>
         </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="MedicationKnowledgeStatusCodes-list">
+    <xs:restriction base="code-primitive">
+      <xs:enumeration value="active">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Active</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="entered-in-error">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Entered in Error</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="inactive">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">Inactive</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MedicationKnowledgeStatusCodes">
+    <xs:annotation>
+      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Element">
+        <xs:attribute name="value" type="MedicationKnowledgeStatusCodes-list" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -34080,16 +34267,6 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
               <xs:documentation xml:lang="en">Identifiers associated with this Medication Usage that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="basedOn" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A plan, proposal or order that is fulfilled in whole or in part by this event.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="partOf" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">A larger event of which this particular event is a component or step.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
           <xs:element name="status" minOccurs="1" maxOccurs="1" type="MedicationUsageStatusCodes">
             <xs:annotation>
               <xs:documentation xml:lang="en">A code representing the status of recording the medication usage.</xs:documentation>
@@ -34122,7 +34299,7 @@ The MedicationUsage resource was previously called MedicationStatement.</xs:docu
           </xs:element>
           <xs:choice minOccurs="0" maxOccurs="1" >
             <xs:annotation>
-              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.status element is NotTaken).</xs:documentation>
+              <xs:documentation xml:lang="en">The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationUsage.adherence element is Not Taking).</xs:documentation>
             </xs:annotation>
             <xs:element name="effectiveDateTime" type="dateTime"/>
             <xs:element name="effectivePeriod" type="Period"/>
@@ -50082,6 +50259,14 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:documentation xml:lang="fr">DéfinitionDeDispositif</xs:documentation>
           <xs:documentation xml:lang="es">DefiniciónDeDispositivo</xs:documentation>
           <xs:documentation xml:lang="zh">装置组件</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DeviceDispense">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">DeviceDispense</xs:documentation>
+          <xs:documentation xml:lang="en">DeviceDispense</xs:documentation>
+          <xs:documentation xml:lang="fr">DispensationDeDispositif</xs:documentation>
+          <xs:documentation xml:lang="es">DispensaciónDeDispositivo</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="DeviceMetric">
