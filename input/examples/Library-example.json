@@ -16,7 +16,7 @@
   },
   "subjectCodeableConcept": {
     "coding": [{
-      "system": "hl7.org/fhir/resource-types",
+      "system": "http://hl7.org/fhir/resource-types",
       "code": "Patient"
     }]
   },

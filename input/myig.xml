@@ -7,6 +7,7 @@
   </extension>-->
   <url value="http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
+  <!-- NOTE: This is disabled with the apply-version parameter below, because it cannot be overridden per resource -->
   <version value="0.2.0"/>
   <name value="YourComputableMyIGNameHere"/>
   <title value="Your User Friendly Name for MyIG Here"/>
@@ -149,6 +150,18 @@
     <parameter>
       <code value="path-binary"/>
       <value value="input\cql"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/Library/FHIRHelpers"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/Library/FHIR-ModelInfo"/>
+    </parameter>
+    <parameter>
+      <code value="apply-version"/>
+      <value value="false"/>
     </parameter>
     <parameter>
       <code value="path-liquid"/>

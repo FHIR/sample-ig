@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <id value="myObservation"/>
   <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation"/>
+  <version value="0.2.0"/>
   <name value="MyObservation"/>
   <title value="My Observation Profile"/>
   <status value="draft"/>

@@ -11,7 +11,7 @@ valueset "Emergency Department Visit": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.1
 valueset "Telephone Evaluation": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.1082'
 valueset "Telephone Management": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.101.12.1053'
 
-valueset "COVID-19 Screening Result": 'TBD'
+valueset "Coronavirus and Other Respiratory Virus Lab Tests": 'http://cts.nlm.nih.gov/fhir/2.16.840.1.113883.3.3616.200.110.102.5014'
 
 code "Laboratory Observation Category": 'laboratory' from "Observation Category Codes"
 
@@ -36,7 +36,7 @@ define "Denominator":
   true
 
 define "COVID-19 Communicable Disease Screening":
-  [Observation: "COVID-19 Screening Result"] Result
+  [Observation: "Coronavirus and Other Respiratory Virus Lab Tests"] Result
     where exists (Result.category C where C ~ "Laboratory Observation Category")
       and Result.status in { 'final', 'amended', 'corrected' }
       and Result.effective during "Measurement Period"
