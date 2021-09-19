@@ -214,6 +214,6 @@ start copy /y "_updatePublisher.new.bat" "_updatePublisher.bat" ^&^& del "_updat
 :end
 
 
-IF "%skipPrompts%"=="true" (
+IF "%skipPrompts%"=="y" (
   PAUSE
-}
+)
