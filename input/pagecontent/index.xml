@@ -8,16 +8,22 @@
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
 	<p>
-    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
-    set important context).
+     
+
+Prometheus is about building a reccomendation engine based on gaps in care which alerts the provider of those gaps with their workflow. So basically what happens is the doctor opens a EHR to view the patients data, the patient view would then fire a CDS hook to a CDS endpoint,
+then the endpoint would access the engine that we are creating, that would use a CQL library to identify what that patient is in need of, the CDS would then return those recommendations in FHIR back to the EHR, the EHR would then access the SOF app to order a service to close
+the gap, and then the service would get sent to a third party where it can be scheduled and fulfilled. For example lets say Bill Hale a male patient over the age of 50, he comes into the office the doctor sees in his EHR that hes had no cancer screenings in his medical history
+nor any indication of cancer, the systems that we will be putting in place will allow these gaps to be analyzed and delievered back to the doctor. by pulling his EHR, accesing the CQL library and having all of this data analyzed it makes it much easier for the doctor/clinician
+to figure out and see what that gap in care is for the patient.
   </p>
+  <img width="100%" src="Prometheus.png" alt="Sequence Diagram"> </img>
   <a name="walkthrough"> </a>
   <p>
     The main sections of this IG are:
   </p>
   <ul>
     <li>
-      <a href="background.html">Background</a> - provides business context for the implementation guide and information that implementers should be
+      <a href="background.html">Backgroundtest</a> - Test provides business context for the implementation guide and information that implementers should be
       familiar with before reading the remainder of the IG.  There could be multiple pages for this.
     </li>
     <li>

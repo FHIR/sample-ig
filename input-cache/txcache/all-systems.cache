@@ -8,13 +8,11 @@
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "text/cql",
+  "code" : "text/cql",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -26,13 +24,11 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "application/elm+xml",
+  "code" : "application/elm+xml",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -44,31 +40,11 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "image/png"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "application/elm+json",
+  "code" : "application/elm+json",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -80,13 +56,27 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "text/x-sql",
+  "code" : "text/x-sql",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/png"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "image/png",
+  "code" : "image/png",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -98,31 +88,11 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "application/xml"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "application/pdf",
+  "code" : "application/pdf",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -134,12 +104,10 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "",
-  "code" : "",
-  "system" : "",
-  "severity" : "error",
-  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+  "display" : "image/jpeg",
+  "code" : "image/jpeg",
+  "system" : "urn:ietf:bcp:13"
 }
 -------------------------------------------------------------------------------------
