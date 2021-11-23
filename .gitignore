@@ -4,7 +4,7 @@ temp
 template
 output
 fsh-generated
-input-cache
+
 
 # Don't commit this because it's so large #
 ###########################################
@@ -23,3 +23,4 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+input-cache
