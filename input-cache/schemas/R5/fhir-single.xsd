@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Tue, Nov 16, 2021 03:47+0000 for FHIR v4.6.0 
+  Generated on Mon, Nov 22, 2021 14:25+0000 for FHIR v4.6.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -15937,7 +15937,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="CompositionAttestationMode">
+          <xs:element name="mode" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of attestation the authenticator offers.</xs:documentation>
            </xs:annotation>
@@ -15963,7 +15963,7 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="DocumentRelationshipType">
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of relationship that this composition has with anther composition or document.</xs:documentation>
            </xs:annotation>
@@ -16101,41 +16101,6 @@ into another (possibly the same) biological entity.</xs:documentation>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="DocumentRelationshipTypeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="replaces">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Replaces</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="transforms">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Transforms</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="signs">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Signs</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="appends">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Appends</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="DocumentRelationshipType">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="DocumentRelationshipTypeEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:simpleType name="ConfidentialityEnum">
     <xs:restriction base="code-primitive">
       <xs:enumeration value="L">
@@ -16178,41 +16143,6 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="Element">
         <xs:attribute name="value" type="ConfidentialityEnum" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:simpleType name="CompositionAttestationModeEnum">
-    <xs:restriction base="code-primitive">
-      <xs:enumeration value="personal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Personal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="professional">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Professional</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="legal">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Legal</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="official">
-        <xs:annotation>
-          <xs:documentation xml:lang="en">Official</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="CompositionAttestationMode">
-    <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
-      <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="Element">
-        <xs:attribute name="value" type="CompositionAttestationModeEnum" use="optional"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -21567,7 +21497,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="media" type="DiagnosticReport.Media" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
+              <xs:documentation xml:lang="en">A list of key images or data associated with this report. The images or data are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="composition" minOccurs="0" maxOccurs="1" type="Reference">
@@ -21603,12 +21533,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
         <xs:sequence>
           <xs:element name="comment" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.</xs:documentation>
+              <xs:documentation xml:lang="en">A comment about the image or data. Typically, this is used to provide an explanation for why the image or data is included, or to draw the viewer's attention to important features.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="link" minOccurs="1" maxOccurs="1" type="Reference">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Reference to the image source.</xs:documentation>
+              <xs:documentation xml:lang="en">Reference to the image or data source.</xs:documentation>
            </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -21938,7 +21868,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="code" minOccurs="1" maxOccurs="1" type="DocumentRelationshipType">
+          <xs:element name="code" minOccurs="1" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of relationship that this document has with anther document.</xs:documentation>
            </xs:annotation>
@@ -23007,12 +22937,12 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:element name="Evidence" type="Evidence">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="Evidence">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
       <xs:documentation xml:lang="en">If the element is present, it must have either a @value, an @id, or extensions</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -23151,7 +23081,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.VariableDefinition">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23192,7 +23122,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Statistic">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23209,7 +23139,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="statisticType" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Type of statistic, eg relative risk.</xs:documentation>
+              <xs:documentation xml:lang="en">Type of statistic, e.g., relative risk.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="category" minOccurs="0" maxOccurs="1" type="CodeableConcept">
@@ -23253,7 +23183,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.SampleSize">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23289,7 +23219,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.AttributeEstimate">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23306,7 +23236,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The type of attribute estimate, eg confidence interval or p value.</xs:documentation>
+              <xs:documentation xml:lang="en">The type of attribute estimate, e.g., confidence interval or p value.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="quantity" minOccurs="0" maxOccurs="1" type="Quantity">
@@ -23335,7 +23265,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.ModelCharacteristic">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23366,7 +23296,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Variable">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
@@ -23402,7 +23332,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
   </xs:complexType>
   <xs:complexType name="Evidence.Certainty">
     <xs:annotation>
-      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
+      <xs:documentation xml:lang="en">The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">

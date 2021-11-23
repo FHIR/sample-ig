@@ -3,7 +3,7 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
 	<p>
-    What is this IG about (in patient/non-expert friendly terms).
+    Prometheus in very straight forward terms is about building an engine that helps doctors and clinicians fill gaps in care. By combining payor data and provider data, our engine screens a patients medical history while also collecting data through various FHIR systems. Making it much simpler for the doctors to help diagnose a patient. 
   </p>
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>

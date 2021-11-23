@@ -4,6 +4,7 @@ temp
 template
 output
 fsh-generated
+input-cache
 
 # Don't commit this because it's so large #
 ###########################################
