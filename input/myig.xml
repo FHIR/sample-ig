@@ -9,7 +9,7 @@
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.2.0"/>
   <name value="YourComputableMyIGNameHere"/>
-  <title value="Your User Friendly Name for MyIG Here"/>
+  <title value="Project Prometheues IG"/>
   <status value="draft"/>
   <experimental value="false"/>
   <publisher value="HL7 International - [Some] Work Group"/>
@@ -130,8 +130,9 @@
       <title value="Table of Contents"/>
       <generation value="html"/>
       <page>
+
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
+        <title value="Prometheus"/>
         <generation value="html"/>
       </page>
       <page>

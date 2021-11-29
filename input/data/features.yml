@@ -1,0 +1,6 @@
+---
+feedback:
+  - active: true
+    dashboard:
+      url: "https://gigatech-net.atlassian.net/secure/CreateIssue.jspa?pid=10001&issuetype=10005"
+      label: New feedback
