@@ -130,8 +130,9 @@
       <title value="Table of Contents"/>
       <generation value="html"/>
       <page>
+
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
+        <title value="Prometheus"/>
         <generation value="html"/>
       </page>
       <page>
