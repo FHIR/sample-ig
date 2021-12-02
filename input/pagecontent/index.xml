@@ -25,19 +25,19 @@ to figure out and see what that gap in care is for the patient.
   </p>
   <ul>
     <li>
-      <a href="spec.html">Electronic Health Record </a> - The provider will use this to view a patient chart, which will then connect to several different systems that we have put in place to help identify the gap in care.)
+      <a href="#">Electronic Health Record </a> - The provider will use this to view a patient chart, which will then connect to several different systems that we have put in place to help identify the gap in care.)
     </li>
     <li>
-      <a href="downloads.html">CDS Server/Recommendation engine </a> - The CDS server is the center piece of this project. It will be receiving and sending information! The prefetch clinical data will be sent to the server, after that both the payor and provider will be returned to the server as recommendations. The server will then be returning that recommendation in form of CDS cards.
+      <a href="#">CDS Server/Recommendation engine </a> - The CDS server is the center piece of this project. It will be receiving and sending information! The prefetch clinical data will be sent to the server, after that both the payor and provider will be returned to the server as recommendations. The server will then be returning that recommendation in form of CDS cards.
     </li>
     <li>
-      <a href="downloads.html">Payor Data </a> - The payor data is simply past records from insurances to help the engine get a proper understanding of a patient’s history. In return making this flow a much easier and accurate process to help fill the gap in care. 
+      <a href="#">Payor Data </a> - The payor data is simply past records from insurances to help the engine get a proper understanding of a patient’s history. In return making this flow a much easier and accurate process to help fill the gap in care. 
     </li>
     <li>
-      <a href="downloads.html">CQL Library </a> - The CQL library will be helping the provider by connecting with payor data and the FHIR systems to help with a diagnosis 
+      <a href="#">CQL Library </a> - The CQL library will be helping the provider by connecting with payor data and the FHIR systems to help with a diagnosis 
     </li>
     <li>
-      <a href="downloads.html">SOF app </a> - - will be viewing and ordering recommendations, in addition this app will be connecting to the third party where the provider can link the patient to their local clinic 
+      <a href="#">SOF app </a> - - will be viewing and ordering recommendations, in addition this app will be connecting to the third party where the provider can link the patient to their local clinic 
     </li>
   </ul>
 </div>
