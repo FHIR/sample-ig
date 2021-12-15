@@ -40,4 +40,18 @@ to figure out and see what that gap in care is for the patient.
       <a href="#">SOF app </a> - - will be viewing and ordering recommendations, in addition this app will be connecting to the third party where the provider can link the patient to their local clinic 
     </li>
   </ul>
+<h3> Use case </h3>
+ <p>
+  This use case scenario is initiated by the provider (Actor) opening the patient chart (via laptop, iPad), this queries the EHR, allowing the provider to enter, document, and review the patients’ vitals as well as the current medication. This patient view triggers a CDS hook to a CDS endpoint, the endpoint accesses the recommendation engine that we are creating, using a CQL library to identify if there are any gaps in care for this patient. The CDS endpoint returns gap in care recommendations in the form of CDS cards back to the EHR. The EHR then accesses the SOF app to order a service to fulfill the identified gap(s) in care. The provider will then view these gaps in care with the patient and determine a procedure (colonoscopy) is needed. The SOF service will trigger a third-party application to schedule an appointment based on availability with the patients local clinic. 
+  </p>
+
+
+
+
+
+
+
+
+
 </div>
+
