@@ -44,12 +44,50 @@ to figure out and see what that gap in care is for the patient.
  <p>
   This use case scenario is initiated by the provider (Actor) opening the patient chart (via laptop, iPad), this queries the EHR, allowing the provider to enter, document, and review the patients’ vitals as well as the current medication. This patient view triggers a CDS hook to a CDS endpoint, the endpoint accesses the recommendation engine that we are creating, using a CQL library to identify if there are any gaps in care for this patient. The CDS endpoint returns gap in care recommendations in the form of CDS cards back to the EHR. The EHR then accesses the SOF app to order a service to fulfill the identified gap(s) in care. The provider will then view these gaps in care with the patient and determine a procedure (colonoscopy) is needed. The SOF service will trigger a third-party application to schedule an appointment based on availability with the patients local clinic. 
   </p>
-
-
-
-
-
-
+<p>
+Goal in context: GigaTECH is establishing itself as an SDVOSB who can solve complex healthcare interoperability issues through the implementation of HL7 standards and FHIR enabled technologies. The scoping and buildout of Prometheus requires teamwork. Requirements must be fleshed out and prioritized; agile software development orchestrated; supporting functionality (such as patient data, EHR, CDS) facilities investigated per build vs. buy; build, deploy and sustainment environments constructed adhering to security and automation techniques; and Sales and Marketing (SandM) needs fulfilled.
+</p>
+<p>
+Scope: A notification will be sent to the provider of an eCQM for a single patient that needs a colorectal cancer screening. The scope also includes decision support service that identifies the eCQM need based on executing CQL on the patients FHIR data. Finally, the scope includes creating a user interface to schedule the colonoscopy
+</p>
+<p>
+Preconditions: making computations for Bill, determining quality measures for scheduling a colonoscopy for Bill also, determining Bill is over 50, has never received a colonoscopy (or other comparative screening procedure), no indications of cancer (i.e., claims data for this type of procedure).
+</p>
+<p>
+Primary: Clinician 
+</p>
+<p>
+Trigger: During encounter doctor opens patient chart.
+</p>
+<h4>Main Success Scenario</h4>
+<ol>
+<li>1.	Bill Hale walks into doctor’s office.</li>
+<li>1.1	Bill checks in, fills out any paperwork needed.</li>
+<li>1.2	Nurse comes to get Bill.</li>
+<li>1.3	Nurse takes patient vital signs and records them in HER.</li>
+<li>1.4	Clinician walks into room.</li> 
+<li>1.5	Clinician review patient records and recorded vital signs in HER.</li>
+<li>2.	Doctor and patient have conversation about any symptoms/concerns.</li>
+<li>2.1	Doctor checks to see if patient meets requirements by age which is 50-75.</li>
+<li>2.2	If patient is under 50 reviews symptoms to see if patient is eligible for a prescribed treatment.</li>
+<li>2.2.1	Exclude patients 66 and older with advanced illness and frailty because it is unlikely that patients will benefit from the services being measured.</li> 
+<li>3.	The EHR will fire a patient view CDS hook to a CDS hook end point.</li> 
+<li>4.	The endpoint will then access a recommendation engine that will use a CQL library to identify gaps in care.</li>
+<li>4.1	The CQL library will be pulling information based on Bill’s history with his providers along with payors as well.</li>
+<li>4.2	The doctor will then receive recommendations based off the payor and provider data in the form of CDS cards.</li>
+<li>4.3	The doctor will provide several different recommendations that Bill can choose from, not only a colonoscopy but other alternatives such as, sigmoidoscopy and a CT colonography.</li> 
+<li>4.4	Bill will then go ahead and tell his doctor that he would like to schedule a colonoscopy.</li>   
+<li>5.	The doctor will then launch the SOF app to view gaps in care and link with several different third-party applications nearby Bill to schedule his colonoscopy.</li> 
+<li>6.	The doctor will schedule Bill’s colonoscopy based off open availability of this third party and a convenient time for him.</li>
+</ol>
+<h4>Extensions</h4>
+<ol>
+<li>•  augmenting the recommendation engine to be AI based with a large patient population to draw from </li>
+<li>•  extending and creating new CQL gaps in care use cases </li>
+<li>•  creating new CQL use cases not related to gaps in care </li>
+<li>•  adding FHIR questionnaires when scheduling to fill in pre-encounter data (such as a standard new patient form)</li>
+<li>- adding a new EHR, such that multiple EHRs can be accessed (i.e., promote EHR agnostic)</li>
+</ol>
 
 
 
