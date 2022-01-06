@@ -77,7 +77,7 @@
 </resource> -->
     <resource>
       <reference>
-        <reference value="Patient/example"/>
+        <reference value="Patient/P01"/>
       </reference>
       <name value="Simple patient example"/>
       <description value="A simple example showing how examples are defined and referenced"/>

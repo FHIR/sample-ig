@@ -1,4 +1,4 @@
-Instance: P01
+Instance: P02
 InstanceOf: Patient
 Usage: #example
 * meta.extension[0].url = "http://hl7.org/fhir/StructureDefinition/instance-name"
@@ -34,25 +34,25 @@ Usage: #example
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.type.text = "Medical Record Number"
 * identifier.system = "http://hospital.smarthealthit.org"
-* identifier.value = "1032702"
+* identifier.value = "P02"
 * active = true
-* name[0].family = "Hale"
-* name[=].given[0] = "Bill"
-* name[=].given[+] = "V."
+* name[0].family = "Taylor"
+* name[=].given[0] = "John"
+* name[=].given[+] = "B."
 * name[=].period.start = "2016-12-06"
 * name[=].period.end = "2020-07-22"
 * name[+].family = "Baxter"
-* name[=].given[0] = "Bill"
-* name[=].given[+] = "V."
+* name[=].given[0] = "John"
+* name[=].given[+] = "B."
 * name[=].suffix = "PharmD"
 * name[=].period.start = "2020-07-22"
 * telecom[0].system = #phone
 * telecom[=].value = "555-555-5555"
 * telecom[=].use = #home
 * telecom[+].system = #email
-* telecom[=].value = "bill.hale@example.com"
-* gender = #male
-* birthDate = "1970-02-20"
+* telecom[=].value = "John.Taylor@example.com"
+* gender = #Male
+* birthDate = "1992-11-11"
 * address[0].line = "49 Meadow St"
 * address[=].city = "Mounds"
 * address[=].state = "OK"

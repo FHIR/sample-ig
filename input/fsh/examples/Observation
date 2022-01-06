@@ -11,7 +11,7 @@ Usage: #example
 * category.text = "Vital Signs"
 * code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
 * code.text = "Blood pressure systolic and diastolic"
-* subject = Reference(Patient/example) "Amy Shaw"
+* subject = Reference(Patient/example) "Bill Hale"
 * encounter.display = "GP Visit"
 * effectiveDateTime = "1999-07-02"
 * component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
