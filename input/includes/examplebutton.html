@@ -1,0 +1,18 @@
+{% assign target = include.example | split: "." | first %}
+{% assign file_type = include.example | split: "." | last %}
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#{{target}}" aria-expanded="false" aria-controls="collapseExample">
+    {{include.b_title | default: "Example" }}
+  </button>
+</p>
+
+<div class="collapse" id="{{target}}">
+  <div class="card card-body" markdown="1">
+      {% if file_type =="xhtml" or file_type =="html" or file_type =="md" %}
+      {% include {{include.example}} %}
+      {% else %}
+      {% include {{include.example}}.md %}
+      {% endif %}
+  </div>
+</div>
+<br />

@@ -1,0 +1,77 @@
+contact:
+-   telecom:
+    -   system: url
+        value: http://hl7.org/Special/committees/[something]
+definition:
+    page:
+        generation: html
+        nameUrl: toc.html
+        page:
+        -   generation: html
+            nameUrl: index.html
+            title: Home
+        -   generation: html
+            nameUrl: background.html
+            title: Background
+        -   generation: html
+            nameUrl: changes.html
+            title: Changes
+        -   generation: html
+            nameUrl: downloads.html
+            title: Downloads
+        -   generation: markdown
+            nameUrl: spec.html
+            title: Spec
+        -   generation: markdown
+            nameUrl: StructureDefinition-ext-myExtension-note.html
+            title: Structure Definition Ext My Extension Note
+        title: Table of Contents
+    parameter:
+    -   code: copyrightyear
+        value: 2020+
+    -   code: releaselabel
+        value: CI Build
+    -   code: show-inherited-invariants
+        value: 'false'
+    -   code: usage-stats-opt-out
+        value: 'false'
+    -   code: path-output
+        value: docs
+    -   code: path-resource
+        value: input/resources
+    -   code: path-resource
+        value: fsh-generated/resources
+    -   code: path-resource
+        value: input/intro-notes
+    -   code: excludexml
+        value: 'true'
+    -   code: escludejsn
+        value: 'false'
+    -   code: excludettl
+        value: 'true'
+    -   code: excludemap
+        value: 'true'
+    -   code: excludeexample
+        value: 'true'
+    resource:
+    -   description: The profile demonstrates using the aggregation element.  The
+            MessageHeader resource references the focus and other information related
+            to the action typically transmitted in the same Bundle.
+        exampleBoolean: false
+        name: Aggregation Example
+        reference:
+            reference: StructureDefinition/aggregation-example
+description: A brief description of what MyIG is about (probably the same text as
+    in your readme)
+fhirVersion:
+- 4.0.1
+id: example.fhir.uv.myig
+license: CC0-1.0
+name: YourComputableMyIGNameHere
+packageId: example.fhir.uv.myig
+publisher: HL7 International - [Some] Work Group
+resourceType: ImplementationGuide
+status: draft
+title: Your User Friendly Name for MyIG Here
+url: http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig
+version: 0.0.0

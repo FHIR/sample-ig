@@ -1,0 +1,41 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "aggregation-example",
+    "url": "http://somewhere.org/fhir/uv/myig/StructureDefinition/aggregation-example",
+    "version": "0.0.0",
+    "name": "AggregationExample",
+    "title": "Aggregation Example",
+    "status": "active",
+    "experimental": true,
+    "date": "2022-02-16T16:22:13-08:00",
+    "description": "The profile demonstrates using the aggregation element.  The MessageHeader resource references the focus and other information related to the action typically transmitted in the same Bundle.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MessageHeader",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MessageHeader",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MessageHeader",
+                "path": "MessageHeader"
+            },
+            {
+                "id": "MessageHeader.focus",
+                "path": "MessageHeader.focus",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/Resource"
+                        ],
+                        "aggregation": [
+                            "bundled"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
