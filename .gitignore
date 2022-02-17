@@ -22,3 +22,8 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+
+# scripts #
+###########
+*.bat
+*.sh
