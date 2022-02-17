@@ -90,7 +90,7 @@
       },
       {
         "code": "path-output",
-        "value": "docs"
+        "value": "output"
       },
       {
         "code": "path-resource",

@@ -36,7 +36,7 @@ definition:
     -   code: usage-stats-opt-out
         value: 'false'
     -   code: path-output
-        value: docs
+        value: output
     -   code: path-resource
         value: input/resources
     -   code: path-resource
