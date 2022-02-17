@@ -3,7 +3,8 @@
 temp
 template
 output
-fsh-generated
+docs
+#fsh-generated
 
 # Don't commit this because it's so large #
 ###########################################
@@ -26,4 +27,4 @@ Thumbs.db
 # scripts #
 ###########
 *.bat
-*.sh
+*.shgit sta
