@@ -1,4 +1,0 @@
-<MyLogical xmlns="http://example.org/logical">
-  <element1 value="1"/>
-  <element2 value="This is a string">Text</element2>
-</MyLogical>
