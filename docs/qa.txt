@@ -3,7 +3,7 @@
 
 err = 0, warn = 1, info = 1
 IG Publisher Version: 1.1.99 Out of date - current version is 1.1.104
-Generated Wed Feb 16 17:08:16 PST 2022. FHIR version 4.0.1 for example.fhir.uv.myig#0.0.0 (canonical = http://somewhere.org/fhir/uv/myig)
+Generated Wed Feb 16 17:55:01 PST 2022. FHIR version 4.0.1 for example.fhir.uv.myig#0.0.0 (canonical = http://somewhere.org/fhir/uv/myig)
  Build Errors : 0 / 0 / 0
  /Users/ehaas/Documents/FHIR/sample-ig/fsh-generated/resources/ImplementationGuide-example.fhir.uv.myig : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/sample-ig/input/resources/aggregation-example : 0 / 1 / 2
