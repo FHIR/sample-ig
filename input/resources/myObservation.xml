@@ -2,10 +2,239 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <id value="myObservation"/>
   <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation"/>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://example.org/some-id-type-system"/>
+        <code value="foo"/>
+      </coding>
+      <text value="Some OID"/>
+    </type>
+    <value value="0.1.2.3.1"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://example.org/some-id-type-system"/>
+        <code value="foo"/>
+      </coding>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="AM"/>
+        <display value="American Express"/>
+      </coding>
+    </type>
+    <value value="0.1.2.3.2"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://example.org/some-id-type-system"/>
+        <code value="ACSN"/>
+      </coding>
+    </type>
+    <value value="0.1.2.3.3"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://example.org/some-id-type-system"/>
+        <code value="123"/>
+      </coding>
+    </type>
+    <value value="0.1.2.3.4"/>
+  </identifier>
+  <identifier>
+    <use value="official"/>
+  </identifier>
+  <identifier>
+    <value value="0.1.2.3.5"/>
+  </identifier>
   <name value="MyObservation"/>
   <title value="My Observation Profile"/>
   <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Publisher for this artifact"/>
+  <contact>
+    <telecom>
+      <!-- Contact for publisher of this artifact -->
+      <system value="url"/>
+      <value value="http://example.org/some-organization"/>
+    </telecom>
+  </contact>
   <description value="A profile showing the use of XML to author profiles"/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="gender"/>
+      <display value="Gender"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/administrative-gender"/>
+        <code value="female"/>
+        <display value="Female"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <unit value="months"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mo"/>
+    </valueQuantity>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueQuantity>
+      <value value="3"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mo"/>
+    </valueQuantity>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueQuantity>
+      <value value="4"/>
+    </valueQuantity>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueRange>
+      <high>
+        <value value="1"/>
+        <unit value="months"/>
+      </high>
+    </valueRange>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueRange>
+      <low>
+        <value value="2"/>
+        <unit value="years"/>
+      </low>
+      <high>
+        <value value="5"/>
+        <unit value="years"/>
+      </high>
+    </valueRange>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="age"/>
+      <display value="Age Range"/>
+    </code>
+    <valueRange>
+      <low>
+        <value value="10"/>
+        <unit value="years"/>
+      </low>
+    </valueRange>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="venue"/>
+      <display value="Clinical Venue"/>
+    </code>
+    <valueReference>
+      <reference value="http://example.org/Location/123"/>
+      <display value="Some location"/>
+    </valueReference>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="venue"/>
+      <display value="Clinical Venue"/>
+    </code>
+    <valueReference>
+      <display value="Some other location"/>
+    </valueReference>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="venue"/>
+      <display value="Clinical Venue"/>
+    </code>
+    <valueReference>
+      <reference value="http://example.org/Location/456"/>
+    </valueReference>
+  </useContext>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="venue"/>
+      <display value="Clinical Venue"/>
+    </code>
+    <valueReference>
+      <identifier>
+        <value value="LOCATION-ABC"/>
+      </identifier>
+    </valueReference>
+  </useContext>
+  <jurisdiction>
+    <coding>
+      <!-- Use this if the IG is country-specific -->
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <jurisdiction>
+    <coding>
+      <!-- Use this if the IG is state/province/territory-specific -->
+      <system value="urn:iso:std:iso:3166:-2"/>
+      <code value="CA-QC"/>
+    </coding>
+  </jurisdiction>
+  <jurisdiction>
+    <coding>
+      <!-- Testing a jurisdiction that doesn't have a resolvable flag -->
+      <system value="urn:iso:std:iso:3166:-2"/>
+      <code value="GR-E"/>
+    </coding>
+  </jurisdiction>
+  <jurisdiction>
+    <!-- Use this only if there's no standard code for the jurisdiction -->
+    <text value="The universe"/>
+  </jurisdiction>
+  <purpose value="Explain why this resource is necessary here"/>
+  <copyright value="Explain licensing or other legal limitations on use"/>
+  <keyword>
+    <system value="http://example.org/some-system"/>
+    <code value="01"/>
+    <display value="keyword 1"/>
+  </keyword>
+  <keyword>
+    <system value="http://example.org/some-system"/>
+    <code value="01"/>
+    <display value="keyword 2"/>
+  </keyword>
   <fhirVersion value="4.0.0"/>
   <kind value="resource"/>
   <abstract value="false"/>
@@ -32,6 +261,10 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake"/>
+      </binding>
       <patternCodeableConcept>
         <coding>
           <system value="http://loinc.org"/>
@@ -158,6 +391,8 @@
       <min value="1"/>
       <fixedCode value="mm[Hg]"/>
       <mustSupport value="true"/>
+    </element>
+
     </element>
   </differential>
 </StructureDefinition>

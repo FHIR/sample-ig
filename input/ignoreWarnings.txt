@@ -18,6 +18,10 @@ INFORMATION: Patient/example: Patient: Validate resource against profile http://
 # This is inherited from the base resource
 WARNING: StructureDefinition/myObservation: StructureDefinition.snapshot.element[15].mapping[3].map: value should not start or finish with whitespace
 
+# These examples are fake code systems - they're not expected to be checked
+Code System URI 'http://example.org/some-id-type-system' is unknown so the code cannot be validated
+Code System URI 'http://example.org/some-system' is unknown so the code cannot be validated
+
 # We're expecting these to not match the slice - we're showing how you can use slicing to define the one repetition you want even when many repetitions might be present
 INFORMATION: Patient/example: Patient.name[0]: This element does not match any known slice defined in the profile http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient
 INFORMATION: Patient/example: Patient.name[1]: This element does not match any known slice defined in the profile http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient

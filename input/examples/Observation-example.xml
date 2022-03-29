@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+test comment for display
+
+-->
+
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="example"/>
+  <meta>
+    <profile value="http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
+      <code value="01"/>
+      <display value="CS1"/>
+    </coding>
+    <coding>
+      <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
+      <code value="01"/>
+      <display value="CS2"/>
+    </coding>
+    <coding>
+      <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
+      <code value="01"/>
+      <display value="VS1"/>
+    </coding>
+    <coding>
+      <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
+      <code value="01"/>
+      <display value="VS2"/>
+    </coding>
+  </code>
+</Observation>

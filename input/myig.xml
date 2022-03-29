@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd">
   <id value="example.fhir.uv.myig"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/> 
+  </extension> 
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/> 
+  </extension>
 <!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
@@ -22,15 +28,11 @@
   </contact>
   <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
   <jurisdiction>
-    <!-- This will drive SNOMED release used -->
+    <!-- This first repetition will drive SNOMED release used -->
     <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <!-- This is the code for universal -->
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
-      <!-- Change to this if the IG is country-specific
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
-      -->
     </coding>
   </jurisdiction>
   <packageId value="example.fhir.uv.myig"/>
@@ -113,9 +115,20 @@
         <generation value="html"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/> 
+        </extension> 
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+          <valueInteger value="3"/> 
+        </extension>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="spec2.html"/>
+          <title value="Spec sub-page"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="downloads.html"/>
