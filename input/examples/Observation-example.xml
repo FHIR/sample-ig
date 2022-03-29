@@ -28,9 +28,39 @@ test comment for display
       <display value="VS1"/>
     </coding>
     <coding>
+      <system value="http://loinc.org"/>
+      <code value="85354-9"/>
+    </coding>
+    <coding>
       <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
       <code value="01"/>
       <display value="VS2"/>
     </coding>
   </code>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8462-4"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
 </Observation>

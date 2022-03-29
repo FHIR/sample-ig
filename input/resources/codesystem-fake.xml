@@ -8,6 +8,7 @@
   <experimental value="true"/>
   <date value="2015-06-22"/>
   <description value="A fake code system"/>
+  <caseSensitive value="true"/>
   <content value="complete"/>
   <concept>
     <code value="01"/>
