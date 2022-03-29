@@ -1,6 +1,7 @@
 == Suppressed Messages ==
 
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
+# instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 # (And include comments like this justifying why)
 
 # We expect that all of the 'structural' resources will only be validated against their respective 'core' resource definitions

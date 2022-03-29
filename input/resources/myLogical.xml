@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="myLogical"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace">
+    <valueUri value="http://example.org/logical"/>
+  </extension>
+  <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/MyLogical"/>
+  <name value="MyLogical"/>
+  <title value="My Logical Model"/>
+  <status value="draft"/>
+  <description value="A profile showing the use of Logical Models to author profiles"/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://somewhere.org/fhir/uv/myig/StructureDefinition/MyLogical"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+  <derivation value="specialization"/>
+  <differential>
+    <element id="MyLogical">
+      <path value="MyLogical"/>
+    </element>
+    <element id="MyLogical.element1">
+      <path value="MyLogical.element1"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element id="MyLogical.element2">
+      <path value="MyLogical.element2"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

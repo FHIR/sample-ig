@@ -4,9 +4,11 @@
   "code" : "85354-9"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Blood pressure panel with all children optional",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -14,9 +16,11 @@ v: {
   "code" : "8480-6"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Systolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -24,8 +28,10 @@ v: {
   "code" : "8462-4"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Diastolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------

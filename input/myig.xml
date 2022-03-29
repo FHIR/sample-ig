@@ -56,6 +56,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/myLogical"/>
+      </reference>
+      <description value="Logical Model"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Library/example-sql"/>
       </reference>
       <description value="A test example"/>
@@ -86,6 +92,27 @@
       <name value="Example binary"/>
       <description value="Example showing binary content"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="application/xml"/>
+      </extension>
+      <reference>
+        <reference value="Binary/logical-example"/>
+      </reference>
+      <name value="Example of Logical Model"/>
+      <description value="Example showing example content for a logical model"/>
+      <exampleCanonical value="http://somewhere.org/fhir/uv/myig/StructureDefinition/MyLogical"/>
+    </resource>    
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-resource-format">
+        <valueCode value="image/jpeg"/>
+      </extension>
+      <reference>
+        <reference value="Binary/image-example"/>
+      </reference>
+      <name value="Example of Binary Image"/>
+      <description value="Example showing example content for an image"/>
+    </resource>    
     <resource>
       <reference>
         <reference value="ValueSet/valueset-no-codesystem"/>

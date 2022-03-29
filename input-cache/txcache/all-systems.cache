@@ -10,9 +10,11 @@
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "text/cql",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -26,9 +28,11 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "application/elm+xml",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -42,9 +46,11 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "application/elm+json",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -58,9 +64,11 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "image/png",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -74,9 +82,11 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "text/x-sql",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -90,8 +100,46 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "application/pdf",
-  "severity" : null,
-  "error" : ""
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/xml"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/jpeg"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: null' (parameters = \"\")"
 }
 -------------------------------------------------------------------------------------
