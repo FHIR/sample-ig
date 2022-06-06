@@ -1,0 +1,13 @@
+{
+  "name": "hl7.sample.template",
+  "version": "0.0.1",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "Sample Template - not intended for real use",
+  "author": "http://hl7.org/fhir",
+  "canonical": "http://github.com/HL7/ig-template-sample",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  }
+}
