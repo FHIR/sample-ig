@@ -1,0 +1,12 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+	<p>
+    Esta es una lista de alteraciones a la especificacion MyIG desde su primera edición.
+  </p>
+  <a name="0.1.0"> </a>
+	<p>
+		<b>2099-01-01 v0.1.0 - My IG R1 (STU ballot 1) Ballot Candidate</b> based on FHIR R4
+  </p>
+  <ul>
+    <li>Versión inicial</li>
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
+  <a name="intro"> </a>
+  <h3>Introducciónn</h3>
+	<p>
+    Para que sirve este IG about (para non-expertos).
+  </p>
+	<a name="technical"> </a>
+	<h3>Resumen técnico</h3>
+	<p>
+    Detalles/contexto adicionales para quien tien experiencia significativa en el dominio. (Esta sección debe ser comprensible posible, y lo más importante es 
+    establecer el contexto esencial).
+  </p>
+  <a name="walkthrough"> </a>
+  <p>
+    Las secciones principales de esta Guía de Implementación  son:
+  </p>
+  <ul>
+    <li>
+      <a href="background.html">Antecedentes</a> - indica el contexto de negocio información que los lectores debrán conocer al consultar la restante parte de la guía de implementación.
+    </li>
+    <li>
+      <a href="spec.html">Especificaciones Detalladas</a> - El contenido técnico, que los implementadores debran ejecutar.  (Esa sección puede contener varias páginas).
+    </li>
+    <li>
+      <a href="downloads.html">Descargas</a> - Allows downloading a copy of this implementation guide and other useful information
+    </li>
+  </ul>
+</div>

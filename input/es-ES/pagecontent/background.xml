@@ -1,0 +1,10 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+  <h3>Heading 1</h3>
+  <p>
+    algun texto
+  </p>
+  <h3>Título 1</h3>
+	<p>
+		<img height="600" src="anImage-es-ES.png" alt="A sample image"/>
+	</p>
+</div>
