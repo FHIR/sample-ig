@@ -2,6 +2,10 @@
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd">
   <id value="example.fhir.uv.myig"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/translationlanguages"> <!-- This extension tells the publisher that resources here are expected to be translated into fr-FR and es-ES -->
+    <valueCode value="fr-FR"/>
+    <valueCode value="es-ES"/>
+  </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="informative"/> 
   </extension> 
