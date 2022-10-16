@@ -131,6 +131,27 @@
       </reference>
       <name value="Value set for no code system"/>
     </resource>
+
+    <resource>
+      <reference>
+        <reference value="CodeSystem/product-size"/>
+      </reference>
+      <name value="Code system for product sizes"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/vs-product-size"/>
+      </reference>
+      <name value="Value set for product sizes"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/product-questionnaire"/>
+      </reference>
+      <name value="Sample Questionnaire"/>
+      <description value="Product Questionnaire"/>
+    </resource>
+
 <!--    <resource>
       <reference>
         <reference value="Library/example"/>
