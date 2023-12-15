@@ -42,8 +42,6 @@ WARNING: Bundle/h1: Bundle.entry[0].resource.ofType(Provenance).reason[0]: No co
 # This error is intentional to demonstrate that CQL files not included in a Library resource in the IG are an error:
 ERROR: sample-ig\input\cql\notincluded.cql: CQL source was not associated with a library resource in the IG.
 
-# These errors are fixed in the latest CQL translator, when the publisher is updated to use that version, these will be addressed
-ERROR: Library/example: Library.relatedArtifact[0].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIR-ModelInfo|4.0.1' does not resolve
-ERROR: Library/example: Library.relatedArtifact[1].resource: Canonical URL 'http://hl7.org/fhir/Library/FHIRHelpers|4.0.1' does not resolve
+# These errors are intentional to demonstrate that specifying the canonical URL for value sets in the CQL is expected
 ERROR: Library/example: Library.relatedArtifact[7].resource: Canonical URLs must be absolute URLs if they are not fragment references (TBD)
 ERROR: Library/example: Library.dataRequirement[4].codeFilter[0].valueSet: Canonical URLs must be absolute URLs if they are not fragment references (TBD)
