@@ -1,0 +1,59 @@
+{
+  "systems" : [
+    {
+      "system" : "http://example.org/some-id-type-system",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://example.org/some-system",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://loinc.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://not-a-known-code-system|2.36",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
+      "authoritative" : ["http://tx.fhir.org/r4"],
+      "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166:-2",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    }
+  ]
+}
