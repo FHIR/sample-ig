@@ -1,0 +1,15 @@
+{
+  "resourceType" : "ActorDefinition",
+  "id" : "example",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-actor-example-url",
+    "valueUrl" : "http://somewhere.else.org/pas/server"
+  }],
+  "url" : "http://somewhere.org/fhir/uv/myig/ActorDefinition/example",
+  "name" : "ExampleServer",
+  "title" : "Example Server",
+  "status" : "active",
+  "date" : "2021-11-02T14:31:30.239Z",
+  "description" : "Client Actor",
+  "type" : "system"
+}

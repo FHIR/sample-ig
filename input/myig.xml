@@ -83,6 +83,9 @@
 </reference>
 </resource> -->
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-example-actor">
+        <valueCanonical value="http://somewhere.org/fhir/uv/myig/ActorDefinition/example"/>
+      </extension>
       <reference>
         <reference value="Patient/example"/>
       </reference>
