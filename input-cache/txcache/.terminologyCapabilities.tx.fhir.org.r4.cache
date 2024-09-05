@@ -1,11 +1,11 @@
 {
   "resourceType" : "TerminologyCapabilities",
   "id" : "FhirServer",
-  "url" : "http://fhir.healthintersections.com.au/open/metadata",
-  "version" : "1.0.0",
+  "url" : "http://tx.fhir.org/r4/metadata",
+  "version" : "2.0.0",
   "name" : "FHIR Reference Server Teminology Capability Statement",
   "status" : "active",
-  "date" : "2022-03-15T00:37:18.559Z",
+  "date" : "2024-09-04T23:48:16.809Z",
   "contact" : [{
     "telecom" : [{
       "system" : "other",
@@ -14,6 +14,9 @@
   }],
   "description" : "Standard Teminology Capability Statement for the open source Reference FHIR Server provided by Health Intersections",
   "codeSystem" : [{
+    "uri" : "http://cap.org/eCP"
+  },
+  {
     "uri" : "http://cds-hooks.hl7.org/CodeSystem/indicator"
   },
   {
@@ -27,6 +30,9 @@
   },
   {
     "uri" : "http://fdasis.nlm.nih.gov"
+  },
+  {
+    "uri" : "http://fhir.ohdsi.org/CodeSystem/concepts"
   },
   {
     "uri" : "http://healthit.gov/nhin/purposeofuse"
@@ -830,10 +836,37 @@
     "uri" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category"
   },
   {
+    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
+  },
+  {
     "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"
   },
   {
     "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/assemble-expectation"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/chf-codes"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/collapsible"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/entryMode"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/questionnaire-answer-constraint"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/temp"
   },
   {
     "uri" : "http://hl7.org/fhir/variable-type"
@@ -857,7 +890,13 @@
     "uri" : "http://loinc.org"
   },
   {
+    "uri" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+  },
+  {
     "uri" : "http://nucc.org/provider-taxonomy"
+  },
+  {
+    "uri" : "http://radlex.org"
   },
   {
     "uri" : "http://snomed.info/sct"
@@ -917,6 +956,15 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/appropriateness-score"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/artifact-identifier-type"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/attribute-estimate-type"
   },
   {
@@ -948,6 +996,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/catalogType"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/cdshooks-indicator"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/certainty-rating"
@@ -1083,6 +1134,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/coverage-selfpay"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/cql-access-modifier"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -1262,6 +1316,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/hl7-work-group"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
   },
   {
@@ -1310,6 +1367,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/match-grade"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/measure-aggregate-method"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/measure-data-usage"
   },
   {
@@ -1320,6 +1380,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/measure-scoring"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/measure-supplemental-data"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/measure-type"
@@ -1529,7 +1592,13 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/service-type"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/smart-capabilities"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/software-system-type-codes"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/special-values"
@@ -3254,6 +3323,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManufacturerModelNameExample"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
   },
   {
@@ -3416,6 +3488,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-SoftwareNameExample"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
   },
   {
@@ -3515,10 +3590,25 @@
     "uri" : "http://www.ada.org/snodent"
   },
   {
+    "uri" : "http://www.ama-assn.org/go/cpt"
+  },
+  {
+    "uri" : "http://www.cms.gov/Medicare/Coding/ICD10"
+  },
+  {
     "uri" : "http://www.nlm.nih.gov/research/umls/rxnorm"
   },
   {
     "uri" : "http://www.whocc.no/atc"
+  },
+  {
+    "uri" : "https://nahdo.org/sopt"
+  },
+  {
+    "uri" : "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/cdcnhsn.html"
+  },
+  {
+    "uri" : "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"
   },
   {
     "uri" : "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding"
@@ -3567,15 +3657,92 @@
   },
   {
     "uri" : "urn:oid:2.16.840.1.113883.3.1937.98.5.8"
+  },
+  {
+    "uri" : "urn:oid:2.16.840.1.113883.6.238"
   }],
   "expansion" : {
     "parameter" : [{
       "name" : "cache-id",
-      "documentation" : "This server supports caching terminology resources between calls. Clients only need to send value sets and codesystems once; there after tehy are automatically in scope for calls with the same cache-id. The cache is retained for 30 min from last call"
+      "documentation" : "This server supports caching terminology resources between calls. Clients only need to send value sets and codesystems once; there after they are automatically in scope for calls with the same cache-id. The cache is retained for 30 min from last call"
     },
     {
       "name" : "tx-resource",
       "documentation" : "Additional valuesets needed for evaluation e.g. value sets referred to from the import statement of the value set being expanded"
+    },
+    {
+      "name" : "_incomplete"
+    },
+    {
+      "name" : "abstract"
+    },
+    {
+      "name" : "activeOnly"
+    },
+    {
+      "name" : "check-system-version"
+    },
+    {
+      "name" : "count"
+    },
+    {
+      "name" : "default-to-latest-version"
+    },
+    {
+      "name" : "displayLanguage"
+    },
+    {
+      "name" : "excludeNested"
+    },
+    {
+      "name" : "excludeNotForUI"
+    },
+    {
+      "name" : "excludePostCoordinated"
+    },
+    {
+      "name" : "force-system-version"
+    },
+    {
+      "name" : "inactive"
+    },
+    {
+      "name" : "includeAlternateCodes"
+    },
+    {
+      "name" : "includeDefinition"
+    },
+    {
+      "name" : "includeDesignations"
+    },
+    {
+      "name" : "incomplete-ok"
+    },
+    {
+      "name" : "limitedExpansion"
+    },
+    {
+      "name" : "mode",
+      "documentation" : "=lenient-display-validation"
+    },
+    {
+      "name" : "no-cache"
+    },
+    {
+      "name" : "offset"
+    },
+    {
+      "name" : "profile"
+    },
+    {
+      "name" : "property"
+    },
+    {
+      "name" : "system-version"
+    },
+    {
+      "name" : "valueSetMode",
+      "documentation" : "= CHECK_MEMBERSHIP_ONLY | NO_MEMBERSHIP_CHECK"
     }]
   }
 }

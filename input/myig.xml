@@ -83,33 +83,6 @@
 </reference>
 </resource> -->
     <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-fragment">
-        <extension url="id">
-          <valueId value="demo1"/>
-        </extension>
-        <extension url="base">
-          <valueString value="name.where(use='usual')"/>
-        </extension>
-        <extension url="ellipse">
-          <valueString value="use"/>
-        </extension>
-      </extension>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-fragment">
-        <extension url="id">
-          <valueId value="demo2"/>
-        </extension>
-        <extension url="ellipse">
-          <valueString value="meta"/>
-        </extension>
-        <extension url="ellipseExcept">
-          <extension url="base">
-            <valueString value="name.where(use='official')"/>
-          </extension>
-          <extension url="except">
-            <valueString value="family | given.first()"/>
-          </extension>
-        </extension>
-      </extension>
       <reference>
         <reference value="Patient/example"/>
       </reference>
@@ -191,6 +164,11 @@
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="fragments.html"/>
+          <title value="Fragments"/>
+          <generation value="html"/>
+        </page>
         <page>
           <nameUrl value="spec2.html"/>
           <title value="Spec sub-page"/>
