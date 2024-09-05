@@ -38,4 +38,8 @@ test comment for display
       <start value="2001-01-01"/>
     </period>    
   </name>
+  <birthDate value="2018-09-07"/>
+  <maritalStatus>
+    <text value="Married"/>
+  </maritalStatus>
 </Patient>

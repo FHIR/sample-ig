@@ -83,6 +83,9 @@
 </reference>
 </resource> -->
     <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-example-actor">
+        <valueCanonical value="http://somewhere.org/fhir/uv/myig/ActorDefinition/example"/>
+      </extension>
       <reference>
         <reference value="Patient/example"/>
       </reference>
@@ -236,6 +239,26 @@
     <parameter>
       <code value="showsource"/>
       <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="i18n-default-lang"/>
+      <value value="en"/>
+    </parameter>
+    <parameter>
+      <code value="i18n-lang"/>
+      <value value="de"/>
+    </parameter>
+    <parameter>
+      <code value="i18n-lang"/>
+      <value value="fr"/>
+    </parameter>
+    <parameter>
+      <code value="translation-sources"/>
+      <value value="input/translations-de"/>
+    </parameter>
+    <parameter>
+      <code value="translation-sources"/>
+      <value value="input/translations-fr"/>
     </parameter>
   </definition>
 </ImplementationGuide>

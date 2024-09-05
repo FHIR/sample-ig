@@ -1,0 +1,62 @@
+# en -> de
+
+#: CanonicalResource.title
+#. A short, descriptive, user-friendly title for the questionnaire.
+msgid "Cancer Quality Forum Questionnaire 2012"
+msgstr "dede"
+
+#: CanonicalResource.publisher
+#. The name of the organization or individual that published the questionnaire.
+msgid "HL7 International - [Some] Work Group"
+msgstr "dede"
+
+#: Questionnaire.item.prefix
+#. A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+msgid "1"
+msgstr "dede"
+
+#: Questionnaire.item.enableWhen.question
+#. The linkId for the question whose answer (or lack of answer) governs whether this item is enabled.
+msgid "1.1"
+msgstr "dede"
+
+#: Questionnaire.item.prefix
+#. A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+msgid "1.1"
+msgstr "dede"
+
+#: Coding.display
+#. A representation of the meaning of the code in the system, following the rules of the system.
+msgid "Angina Pectoris"
+msgstr "dede"
+
+#: Coding.display
+#. A representation of the meaning of the code in the system, following the rules of the system.
+msgid "Angina (disorder)"
+msgstr "dede"
+
+#: Questionnaire.item.prefix
+#. A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+msgid "1.1.1"
+msgstr "dede"
+
+#: Coding.display
+#. A representation of the meaning of the code in the system, following the rules of the system.
+msgid "Myocardial infarction (disorder)"
+msgstr "dede"
+
+#: Questionnaire.item.prefix
+#. A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+msgid "1.1.2"
+msgstr "dede"
+
+#: Questionnaire.item.prefix
+#. A short label for a particular group, question or set of display text within the questionnaire used for reference by the individual completing the questionnaire.
+msgid "1.2"
+msgstr "dede"
+
+#: Coding.display
+#. A representation of the meaning of the code in the system, following the rules of the system.
+msgid "pT category"
+msgstr "dede"
+

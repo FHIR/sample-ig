@@ -11,6 +11,9 @@ test comment for display
     <profile value="http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation"/>
   </meta>
   <status value="final"/>
+  <subject>
+    <reference value="http://somewhere.else.org/pas/server/Patient/example"/>
+  </subject>
   <code>
     <coding>
       <system value="http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake"/>
