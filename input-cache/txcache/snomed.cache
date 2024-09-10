@@ -19,7 +19,6 @@ v: {
   "error" : "Wrong Display Name 'Angina (disorder)' for http://snomed.info/sct#194828000. Valid display is one of 0 choices: [] (for the language(s) 'en-AU')",
   "class" : "UNKNOWN",
   "server" : "https://tx.ontoserver.csiro.au/fhir",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -63,7 +62,6 @@ v: {
   "error" : "Wrong Display Name 'Myocardial infarction (disorder)' for http://snomed.info/sct#22298006. Valid display is one of 0 choices: [] (for the language(s) 'en-AU')",
   "class" : "UNKNOWN",
   "server" : "https://tx.ontoserver.csiro.au/fhir",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -83,6 +81,54 @@ v: {
     "location" : ["Coding.display"],
     "expression" : ["Coding.display"]
   }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "194828000",
+  "display" : "Angina (disorder)"
+}, "valueSet" :null, "langs":"en-CA", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Angina",
+  "code" : "194828000",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/900000000000207008/version/20240201",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "22298006",
+  "display" : "Myocardial infarction (disorder)"
+}, "valueSet" :null, "langs":"en-CA", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Myocardial infarction",
+  "code" : "22298006",
+  "system" : "http://snomed.info/sct",
+  "version" : "http://snomed.info/sct/900000000000207008/version/20240201",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
 }
 
 }

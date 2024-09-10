@@ -11,6 +11,16 @@
       "candidates" : []
     },
     {
+      "system" : "http://example.org/system/code/questions",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
+      "system" : "http://example.org/system/code/sections",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
       "system" : "http://loinc.org",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
@@ -24,6 +34,11 @@
       "system" : "http://not-a-known-code-system|2.36",
       "authoritative" : [],
       "candidates" : []
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
@@ -44,6 +59,11 @@
       "system" : "urn:ietf:bcp:13",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:ietf:bcp:47",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
     }
   ]
 }
