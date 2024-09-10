@@ -30,18 +30,18 @@
   <a name="ellipsing"> </a>
   <h3>Ellipsing</h3>
   <p>
-    Sometimes you want to perform more filtering than only selecting an element within your instance.  You want to only show a portion of that element, hiding (ellipsing) the content you don't care about.  There are two ways to do this: you can either define the specific elements you want to ellide (replace with '...'); or you can define the elements you <i>don't</i> want to ellide.
+    Sometimes you want to perform more filtering than only selecting an element within your instance.  You want to only show a portion of that element, hiding (ellipsing) the content you don't care about.  There are two ways to do this: you can either define the specific elements you want to elide (replace with '...'); or you can define the elements you <i>don't</i> want to elide.
   </p>
-  <p>The 'ELLIDE:' filter can only be specified once, but with FHIRPath '|', you can express as many elements as you like.  For example, <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML BASE:name.where(use='official').first() ELLIDE:use|given[1]|period %}{% endraw %}</code> will look like this:</p>
-  {% fragment Patient/example XML BASE:name.where(use='official').first() ELLIDE:use|given[1]|period %}
+  <p>The 'ELIDE:' filter can only be specified once, but with FHIRPath '|', you can express as many elements as you like.  For example, <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML BASE:name.where(use='official').first() ELIDE:use|given[1]|period %}{% endraw %}</code> will look like this:</p>
+  {% fragment Patient/example XML BASE:name.where(use='official').first() ELIDE:use|given[1]|period %}
   
   <p>
-    'EXCEPT:' works slightly differently.  With Except you identify the elements to retain (be unellided) but you can also specify a descendant 'BASE:' element those expressions are evaluated within.  For example, the following expression will return the patient showing only id an names, and within name, will ellide everything except the family name: <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML EXCEPT:id|name EXCEPT:family BASE:name %}{% endraw %}</code>
+    'EXCEPT:' works slightly differently.  With Except you identify the elements to retain (be unelided) but you can also specify a descendant 'BASE:' element those expressions are evaluated within.  For example, the following expression will return the patient showing only id an names, and within name, will elide everything except the family name: <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML EXCEPT:id|name EXCEPT:family BASE:name %}{% endraw %}</code>
   </p>
   {% fragment Patient/example XML EXCEPT:id|name EXCEPT:family BASE:name %}
 
   <p>
     The overall syntax for fragments is as follows:
-    <code>{% raw %}&#x7b;%&#xA0;fragment [resource]/[id] [XML|JSON] (BASE:[base FHIRPath])? (ELLIDE:[ellide elements path])? (EXCEPT:[except elements FHIRPath] (BASE:[except base FHIRPath])?)* %}{% endraw %}</code>
+    <code>{% raw %}&#x7b;%&#xA0;fragment [resource]/[id] [XML|JSON] (BASE:[base FHIRPath])? (ELIDE:[elide elements path])? (EXCEPT:[except elements FHIRPath] (BASE:[except base FHIRPath])?)* %}{% endraw %}</code>
   </p>
 </div>
