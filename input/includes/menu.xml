@@ -19,6 +19,9 @@
       <li>
         <a href="spec.html">Detailed Specification</a>
       </li>
+      <li>
+        <a href="fragments.html">Instance Fragments</a>
+      </li>
     </ul>
   </li>
   <li><a href="artifacts.html">Artifact Index</a></li>

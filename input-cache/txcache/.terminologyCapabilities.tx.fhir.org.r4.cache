@@ -5,7 +5,7 @@
   "version" : "2.0.0",
   "name" : "FHIR Reference Server Teminology Capability Statement",
   "status" : "active",
-  "date" : "2024-03-20T10:31:27.901Z",
+  "date" : "2024-09-04T23:48:16.809Z",
   "contact" : [{
     "telecom" : [{
       "system" : "other",
@@ -959,6 +959,12 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/appropriateness-score"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/artifact-identifier-type"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/attribute-estimate-type"
   },
   {
@@ -1128,6 +1134,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/coverage-selfpay"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/cql-access-modifier"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -1587,6 +1596,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/smart-capabilities"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/software-system-type-codes"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/special-values"

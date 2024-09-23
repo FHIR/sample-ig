@@ -1,0 +1,47 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
+	<p>
+    This page describes how to embed 'fragments' of a resource within a page, possibly elliding out portions
+    of the instance to only show the portions that are relevant to what the surrounding text needs to talk about.
+  </p>
+  <p>
+    To embed content from an instance, use the following structure:<br/>
+    
+    <code>{% raw %}&#x7b;%&#xA0;fragment <i>ResourceType</i>/<i>id</i> <i>syntax</i> %}{% endraw %}</code><br/>
+    where:
+  </p>
+  <ul>
+    <li><code>ResourceType</code> is 'Patient', 'Observation', etc.  For a logical model instance, this will be 'Binary'.</li>
+    <li><code>id</code> is the unique resource id of the resource within the IG.</li>
+    <li><code>syntax</code> is either 'XML' or 'JSON'.  (TTL is not yet supported.)</li>
+  </ul>
+  <p>For example, <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML %}{% endraw %}</code> in this IG evaluates to</p>
+  {% fragment Patient/example XML %}
+  
+  <a name="filtering"> </a>
+  <h3>Filtering</h3>
+  <p>
+    However, often examples can be somewhat sizeable and you don't necessarily want to include the entire example in the flow of your narrative - you only need a portion.  To filter to a limited portion of the specified resource, you need to declare a 'base' element within that resource that will be included as your fragment.  The 'base' is expressed as a FHIRPath expression evaluated against the root of the resource.
+  </p>
+  <p>
+    For example, <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example JSON BASE:name.where(use='usual') %}{% endraw %}</code> will result in the following:
+  </p>
+  {% fragment Patient/example JSON BASE:name.where(use='official').first() %}
+
+  <a name="ellipsing"> </a>
+  <h3>Ellipsing</h3>
+  <p>
+    Sometimes you want to perform more filtering than only selecting an element within your instance.  You want to only show a portion of that element, hiding (ellipsing) the content you don't care about.  There are two ways to do this: you can either define the specific elements you want to elide (replace with '...'); or you can define the elements you <i>don't</i> want to elide.
+  </p>
+  <p>The 'ELIDE:' filter can only be specified once, but with FHIRPath '|', you can express as many elements as you like.  For example, <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML BASE:name.where(use='official').first() ELIDE:use|given[1]|period %}{% endraw %}</code> will look like this:</p>
+  {% fragment Patient/example XML BASE:name.where(use='official').first() ELIDE:use|given[1]|period %}
+  
+  <p>
+    'EXCEPT:' works slightly differently.  With Except you identify the elements to retain (be unelided) but you can also specify a descendant 'BASE:' element those expressions are evaluated within.  For example, the following expression will return the patient showing only id an names, and within name, will elide everything except the family name: <code>{% raw %}&#x7b;%&#xA0;fragment Patient/example XML EXCEPT:id|name EXCEPT:family BASE:name %}{% endraw %}</code>
+  </p>
+  {% fragment Patient/example XML EXCEPT:id|name EXCEPT:family BASE:name %}
+
+  <p>
+    The overall syntax for fragments is as follows:
+    <code>{% raw %}&#x7b;%&#xA0;fragment [resource]/[id] [XML|JSON] (BASE:[base FHIRPath])? (ELIDE:[elide elements path])? (EXCEPT:[except elements FHIRPath] (BASE:[except base FHIRPath])?)* %}{% endraw %}</code>
+  </p>
+</div>

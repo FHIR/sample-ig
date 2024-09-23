@@ -168,6 +168,11 @@
         <title value="Detailed Specification"/>
         <generation value="markdown"/>
         <page>
+          <nameUrl value="fragments.html"/>
+          <title value="Fragments"/>
+          <generation value="html"/>
+        </page>
+        <page>
           <nameUrl value="spec2.html"/>
           <title value="Spec sub-page"/>
           <generation value="markdown"/>
