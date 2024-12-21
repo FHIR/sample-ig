@@ -260,5 +260,9 @@
       <code value="translation-sources"/>
       <value value="input/translations-fr"/>
     </parameter>
+    <parameter>
+      <code value="fcp-approved-specification"/>
+      <value value="false"/>
+    </parameter>
   </definition>
 </ImplementationGuide>

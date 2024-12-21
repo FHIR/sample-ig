@@ -21,6 +21,11 @@
       "candidates" : []
     },
     {
+      "system" : "http://hl7.org/fhir/fhir-types",
+      "authoritative" : [],
+      "candidates" : []
+    },
+    {
       "system" : "http://loinc.org",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
@@ -64,6 +69,16 @@
       "system" : "urn:ietf:bcp:47",
       "authoritative" : [],
       "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
+    },
+    {
+      "system" : "urn:iso:std:iso:3166:-2",
+      "authoritative" : [],
+      "candidates" : ["http://tx.fhir.org/r4"]
     }
   ]
 }
