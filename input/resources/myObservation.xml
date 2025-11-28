@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <id value="myObservation"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="5"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm-support">
+    <valueMarkdown value="Why this resource is FMM5"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
+    <valueMarkdown value="Why this resource is informative"/>
+  </extension>
   <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation"/>
   <identifier>
     <type>
@@ -244,6 +256,12 @@
   <differential>
     <element id="Observation.basedOn">
       <path value="Observation.basedOn"/>
+      <constraint>
+        <key value="myObs-1"/>
+        <severity value="warning"/>
+        <human value="There should not be a value if the Observation is only 'registered'"/>
+        <expression value="status='registered' implies value.empty()"/>
+      </constraint>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.partOf">
@@ -276,12 +294,14 @@
       <path value="Observation.subject"/>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient">
           <!-- this is an error - it is meaningless unless the element itself is must-support -->
           <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support">
             <valueBoolean value="true"/>
           </extension>
         </targetProfile>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -300,6 +320,7 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
+      <condition value="myObs-1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.component">

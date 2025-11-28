@@ -237,6 +237,10 @@
       <value value="true"/>
     </parameter>-->
     <parameter>
+      <code value="generate-uml"/>
+      <value value="source"/>
+    </parameter>
+    <parameter>
       <code value="showsource"/>
       <value value="true"/>
     </parameter>
@@ -263,6 +267,10 @@
     <parameter>
       <code value="fcp-approved-specification"/>
       <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="toggle-changes"/>
+      <value value="true"/>
     </parameter>
   </definition>
 </ImplementationGuide>

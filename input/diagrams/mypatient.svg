@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="assets/fhir.css" type="text/css"?><svg
+   width="1042.1599999999999"
+   id="n1"
+   version="1.1"
+   height="198.0"
+   sodipodi:docname="mypatient.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7041529"
+     inkscape:cx="403.42625"
+     inkscape:cy="81.272052"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="n1" />
+  <path
+     d="m 262.16,17.119797 h 95.98212"
+     style="fill:none;stroke:#000080;stroke-width:1.28819"
+     id="Patient-Patient.extension" />
+  <polygon
+     transform="rotate(0.0 262.15999999999997 18.0)"
+     style="fill:navy;stroke:navy;stroke-width:1"
+     id="Patient-Patient.extension-lpolygon"
+     points="262.15999999999997,18.0 268.15999999999997,22.0 274.15999999999997,18.0 268.15999999999997,14.0 262.15999999999997,18.0" />
+  <g
+     id="g1"
+     transform="translate(35.902524,7.6284238)">
+    <rect
+       x="271.5"
+       width="39"
+       y="10"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0"
+       id="Patient-Patient.extension-lrect"
+       height="20" />
+    <text
+       text-anchor="middle"
+       x="291"
+       y="22"
+       id="Patient-Patient.extension-lname"
+       fill="#000000"
+       class="diagram-class-linkage"><a
+         id="n22"
+         xlink:href="null#Patient.extension"><title
+   id="title1">An Extension</title>extension
+      </a></text>
+  </g>
+  <text
+     text-anchor="middle"
+     x="339.90253"
+     y="12.826396"
+     id="Patient-Patient.extension-lcard"
+     fill="#000000"
+     class="diagram-class-linkage">[0..*]</text>
+  <path
+     d="M 525.04892,17.706599 H 625.135"
+     style="fill:none;stroke:#62a856;stroke-width:2.331"
+     id="Patient.extension-Patient.extension:myExtension" />
+  <g
+     id="g2">
+    <rect
+       x="523.0"
+       width="0.0"
+       y="10.0"
+       style="fill:white;stroke:black;stroke-width:0"
+       id="Patient.extension-Patient.extension:myExtension-lrect"
+       height="20.0" />
+    <text
+       text-anchor="middle"
+       x="523.0"
+       y="22.0"
+       id="Patient.extension-Patient.extension:myExtension-lname"
+       fill="black"
+       class="diagram-class-linkage"><a
+         id="n23"
+         xlink:href="null#Patient.extension:myExtension"><title
+           id="title2">An Extension</title></a></text>
+  </g>
+  <text
+     text-anchor="middle"
+     x="605.7218"
+     y="13.06599"
+     id="Patient.extension-Patient.extension:myExtension-lcard"
+     fill="#000000"
+     class="diagram-class-linkage">[0..1]</text>
+  <path
+     d="M155.25439999999998 36.0 L98.98559999999998 100.00000000000001"
+     style="stroke:navy;stroke-width:1;fill:none"
+     id="Patient-Patient.name" />
+  <polygon
+     transform="rotate(131.32193478643438 155.25439999999998 36.0)"
+     style="fill:navy;stroke:navy;stroke-width:1"
+     id="Patient-Patient.name-lpolygon"
+     points="155.25439999999998,36.0 161.25439999999998,40.0 167.25439999999998,36.0 161.25439999999998,32.0 155.25439999999998,36.0" />
+  <g
+     id="g3">
+    <rect
+       x="118.5"
+       width="17.0"
+       y="60.0"
+       style="fill:white;stroke:black;stroke-width:0"
+       id="Patient-Patient.name-lrect"
+       height="20.0" />
+    <text
+       text-anchor="middle"
+       x="127.0"
+       y="72.0"
+       id="Patient-Patient.name-lname"
+       fill="black"
+       class="diagram-class-linkage"><a
+         id="n24"
+         xlink:href="null#Patient.name"><title
+   id="title3">A name associated with the individual</title>name
+      </a></text>
+  </g>
+  <text
+     text-anchor="middle"
+     x="98.98559999999998"
+     y="96.00000000000001"
+     id="Patient-Patient.name-lcard"
+     fill="black"
+     class="diagram-class-linkage">[0..*]</text>
+  <path
+     d="M166.32000000000002 123.04458598726117 L240.0 127.51410373066426"
+     style="stroke:#62A856;stroke-width:2;fill:none"
+     id="Patient.name-Patient.name:CurrentOfficial" />
+  <g
+     id="g4">
+    <rect
+       x="203.0"
+       width="0.0"
+       y="117.0"
+       style="fill:white;stroke:black;stroke-width:0"
+       id="Patient.name-Patient.name:CurrentOfficial-lrect"
+       height="20.0" />
+    <text
+       text-anchor="middle"
+       x="203.0"
+       y="129.0"
+       id="Patient.name-Patient.name:CurrentOfficial-lname"
+       fill="black"
+       class="diagram-class-linkage"><a
+         id="n25"
+         xlink:href="null#Patient.name:CurrentOfficial"><title
+           id="title4">A name associated with the individual</title></a></text>
+  </g>
+  <text
+     text-anchor="middle"
+     x="220.0"
+     y="123.51410373066426"
+     id="Patient.name-Patient.name:CurrentOfficial-lcard"
+     fill="black"
+     class="diagram-class-linkage">[1..1]</text>
+  <defs
+     id="defs4">
+    <filter
+       x="-0.03186628"
+       width="1.0817701"
+       y="-0.14722222"
+       id="shadowmypatient"
+       height="1.3777778">
+      <feOffset
+         result="offOut"
+         dx="3"
+         in="SourceGraphic"
+         dy="3"
+         id="feOffset4" />
+      <feColorMatrix
+         result="matrixOut"
+         in="offOut"
+         values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"
+         type="matrix"
+         id="feColorMatrix4" />
+      <feGaussianBlur
+         result="blurOut"
+         stdDeviation="2"
+         in="matrixOut"
+         id="feGaussianBlur4" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="blurOut"
+         id="feBlend4" />
+    </filter>
+  </defs>
+  <g
+     id="n2">
+    <rect
+       filter="url(#shadowmypatient)"
+       rx="4"
+       ry="4"
+       x="80.0"
+       width="182.16"
+       y="0.0"
+       style="fill:#ffffff;stroke:black;stroke-width:1"
+       id="Patient"
+       height="36.0" />
+    <line
+       y1="28.0"
+       x1="80.0"
+       y2="28.0"
+       x2="262.15999999999997"
+       style="stroke:dimgrey;stroke-width:1"
+       id="n3" />
+    <text
+       text-anchor="middle"
+       x="171.07999999999998"
+       y="20.0"
+       id="n4"
+       fill="black"
+       class="diagram-class-title  diagram-class-resource">
+MyPatientName (      <a
+   style="font-style: italic"
+   id="n5"
+   class="diagram-class-reference"
+   xlink:href="http://hl7.org/fhir/R4/patient.html">Patient</a>
+)
+    </text>
+  </g>
+  <g
+     id="n6"
+     transform="translate(38.72892)">
+    <rect
+       filter="url(#shadowmypatient)"
+       rx="4"
+       ry="4"
+       x="320"
+       width="166.32001"
+       y="0"
+       style="fill:#ffffff;stroke:#000000;stroke-width:1"
+       id="Patient.extension"
+       height="36" />
+    <line
+       y1="28"
+       x1="320"
+       y2="28"
+       x2="486.32001"
+       style="stroke:#696969;stroke-width:1"
+       id="n7" />
+    <text
+       text-anchor="middle"
+       x="403.16"
+       y="20"
+       id="n8"
+       fill="#000000"
+       class="diagram-class-title"><a
+         id="n9"
+         xlink:href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></text>
+  </g>
+  <g
+     id="n10"
+     transform="translate(66.308606,1.760406)">
+    <rect
+       filter="url(#shadowmypatient)"
+       rx="4"
+       ry="4"
+       x="560"
+       width="182.16"
+       y="0"
+       style="fill:#ffffff;stroke:#62a856;stroke-width:1"
+       id="Patient.extension:myExtension"
+       height="36" />
+    <line
+       y1="28"
+       x1="560"
+       y2="28"
+       x2="742.15997"
+       style="stroke:#696969;stroke-width:1"
+       id="n11" />
+    <text
+       text-anchor="middle"
+       x="651.08002"
+       y="20"
+       id="n13"
+       fill="#000000"
+       class="diagram-class-title">myExtension</text>
+  </g>
+  <g
+     id="n14">
+    <rect
+       filter="url(#shadowmypatient)"
+       rx="4"
+       ry="4"
+       x="0.0"
+       width="166.32000000000002"
+       y="100.0"
+       style="fill:#ffffff;stroke:black;stroke-width:1"
+       id="Patient.name"
+       height="36.0" />
+    <line
+       y1="128.0"
+       x1="0.0"
+       y2="128.0"
+       x2="166.32000000000002"
+       style="stroke:dimgrey;stroke-width:1"
+       id="n15" />
+    <text
+       text-anchor="middle"
+       x="83.16000000000001"
+       y="120.0"
+       id="n16"
+       fill="black"
+       class="diagram-class-title"><a
+         id="n17"
+         xlink:href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a></text>
+  </g>
+  <g
+     id="n18">
+    <rect
+       filter="url(#shadowmypatient)"
+       rx="4"
+       ry="4"
+       x="240.0"
+       width="213.84000000000003"
+       y="100.0"
+       style="fill:#ffffff;stroke:#62A856;stroke-width:1"
+       id="Patient.name:CurrentOfficial"
+       height="68.0" />
+    <line
+       y1="128.0"
+       x1="240.0"
+       y2="128.0"
+       x2="453.84000000000003"
+       style="stroke:dimgrey;stroke-width:1"
+       id="n19" />
+    <text
+       text-anchor="middle"
+       x="346.92"
+       y="120.0"
+       id="n21"
+       fill="black"
+       class="diagram-class-title">CurrentOfficial</text>
+    <foreignObject
+       x="246.0"
+       width="211.84000000000003"
+       y="128.0"
+       height="16.0">
+      <xhtml:div
+         class="diagram-class-detail"><xhtml:a
+   style="text-decoration: none;"
+   href="null#Patient.name:CurrentOfficial.use"
+   title="Identifies the purpose for this name (this element modifies the meaning of other elements, and must be supported)">use</xhtml:a>
+
+ :         <xhtml:a
+   style="text-decoration: none;"
+   href="http://hl7.org/fhir/R4/datatypes.html#code">code</xhtml:a>
+
+ [1..1]         <xhtml:span
+   style="padding-left: 3px; padding-right: 3px; font-weight: bold; font-family: verdana; color: black; background-color: white"
+   title="This element is a modifier element">?!</xhtml:span>
+<xhtml:span
+   style="padding-left: 3px; padding-right: 3px; font-weight: bold; font-family: verdana; color: white; background-color: red"
+   title="This element must be supported">S</xhtml:span>
+<xhtml:span
+   style="padding-left: 3px; padding-right: 3px; font-weight: bold; font-family: verdana; color: black; background-color: #95fc9c"
+   title="Fixed Value: official">F</xhtml:span>
+<xhtml:a
+   style="text-decoration: none;; padding-left: 3px; padding-right: 3px; font-weight: bold; font-family: verdana; color: black; background-color: #fad570"
+   href="http://hl7.org/fhir/ValueSet/name-use|4.0.1"
+   title="Required Binding to ValueSet (http://hl7.org/fhir/ValueSet/name-use|4.0.1)">B!</xhtml:a>
+</xhtml:div>
+    </foreignObject>
+    <foreignObject
+       x="246.0"
+       width="211.84000000000003"
+       y="144.0"
+       height="16.0">
+      <xhtml:div
+         class="diagram-class-detail"><xhtml:a
+   style="text-decoration: none;"
+   href="null#Patient.name:CurrentOfficial.period"
+   title="Indicates the period of time when this name was valid for the named person">period</xhtml:a>
+
+ :         <xhtml:a
+   style="text-decoration: none;"
+   href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</xhtml:a>
+
+ [0..1]
+      </xhtml:div>
+    </foreignObject>
+  </g>
+</svg>

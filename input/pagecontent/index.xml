@@ -30,4 +30,10 @@
       <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
     </li>
   </ul>
+  <p class="modified-content">
+    Sample showing changed content
+  </p>
+  <p class="new-content">
+    Sample showing new content
+  </p>
 </div>

@@ -1,3 +1,21 @@
 {
-  "http://not-a-known-code-system|2.36" : null
+  "http://not-a-known-code-system" : null,
+  "http://unstats.un.org/unsd/methods/m49/m49.htm" : null,
+  "http://example.org/some-id-type-system" : null,
+  "http://example.org/system/code/sections|null" : null,
+  "http://example.org/system/code/questions|null" : null,
+  "http://not-a-known-code-system|2.36" : null,
+  "http://example.org/system/code/questions" : null,
+  "http://example.org/some-id-type-system|null" : null,
+  "http://unitsofmeasure.org" : null,
+  "http://example.org/some-system|null" : null,
+  "urn:ietf:bcp:13|null" : null,
+  "urn:ietf:bcp:47" : null,
+  "urn:ietf:bcp:13" : null,
+  "urn:iso:std:iso:3166" : null,
+  "http://hl7.org/fhir/fhir-types|null" : null,
+  "http://unstats.un.org/unsd/methods/m49/m49.htm|null" : null,
+  "http://example.org/system/code/sections" : null,
+  "urn:iso:std:iso:3166:-2" : null,
+  "http://example.org/some-system" : null
 }

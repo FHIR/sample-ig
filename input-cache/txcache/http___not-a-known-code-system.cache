@@ -39,7 +39,6 @@ v: {
   "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
   "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -82,7 +81,6 @@ v: {
   "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
   "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -131,5 +129,207 @@ e: {
 e: {
   "from-server" : true,
   "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://not-a-known-code-system version 2.36"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://not-a-known-code-system",
+  "version" : "2.36",
+  "code" : "not-known-code"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "displayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "code" : "not-known-code",
+  "system" : "http://not-a-known-code-system",
+  "version" : "2.36",
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
+  "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
+  "server" : "https://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []"
+    },
+    "location" : ["Coding.system"],
+    "expression" : ["Coding.system"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://not-a-known-code-system",
+  "version" : "2.36",
+  "code" : "not-known-code2"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "displayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "code" : "not-known-code2",
+  "system" : "http://not-a-known-code-system",
+  "version" : "2.36",
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
+  "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
+  "server" : "https://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNKNOWN_CODESYSTEM_VERSION"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []"
+    },
+    "location" : ["Coding.system"],
+    "expression" : ["Coding.system"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "en", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "de", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "fr", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "en", "url": "http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem", "version": "0.2.0"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "de", "url": "http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem", "version": "0.2.0"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "fr", "url": "http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem", "version": "0.2.0"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
 }
 -------------------------------------------------------------------------------------
