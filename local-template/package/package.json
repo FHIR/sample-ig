@@ -1,6 +1,6 @@
 {
   "name": "hl7.sample.template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "fhir.template",
   "license": "CC0-1.0",
   "description": "Sample Template - not intended for real use",
