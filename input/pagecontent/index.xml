@@ -23,7 +23,7 @@
     <li>
       <a href="spec.html">Detailed Specification</a> - The actual stuff implementers are expected to do.  (Could be multiple pages for this.)
     </li>
-    <li>
+    <li class="new-content">
       <a href="fragments.html">Fragments</a> - Guidance about how to embed fragments in an IG
     </li>
     <li>
