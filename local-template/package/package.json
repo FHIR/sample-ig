@@ -6,7 +6,7 @@
   "description": "Sample Template - not intended for real use",
   "author": "http://hl7.org/fhir",
   "canonical": "http://github.com/HL7/ig-template-sample",
-  "base": "fhir.base.template",
+  "base": "fhir2.base.template",
   "dependencies": {
     "fhir.base.template": "current"
   }
