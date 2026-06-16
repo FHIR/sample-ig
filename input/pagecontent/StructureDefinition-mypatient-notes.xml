@@ -2,4 +2,7 @@
 	<p>
     Usage notes on the patient profile
   </p>
+  <p>
+    <embed src="mypatient.svg" type="image/svg+xml"/>
+  </p>
 </div>

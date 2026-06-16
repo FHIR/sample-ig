@@ -43,5 +43,5 @@ WARNING: Bundle/h1: Bundle.entry[0].resource.ofType(Provenance).reason[0]: No co
 ERROR: sample-ig\input\cql\notincluded.cql: CQL source was not associated with a library resource in the IG.
 
 # These errors are intentional to demonstrate that specifying the canonical URL for value sets in the CQL is expected
-ERROR: Library/example: Library.relatedArtifact[7].resource: Canonical URLs must be absolute URLs if they are not fragment references (TBD)
+ERROR: Library/example: Library.relatedArtifact[6].resource: Canonical URLs must be absolute URLs if they are not fragment references (TBD)
 ERROR: Library/example: Library.dataRequirement[4].codeFilter[0].valueSet: Canonical URLs must be absolute URLs if they are not fragment references (TBD)

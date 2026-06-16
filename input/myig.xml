@@ -241,6 +241,10 @@
       <value value="source"/>
     </parameter>
     <parameter>
+      <code value="path-pages"/>
+      <value value="input/diagrams"/>
+    </parameter>
+    <parameter>
       <code value="showsource"/>
       <value value="true"/>
     </parameter>
@@ -270,6 +274,14 @@
     </parameter>
     <parameter>
       <code value="toggle-changes"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="globals-in-artifacts"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="term-params-in-artifacts"/>
       <value value="true"/>
     </parameter>
   </definition>

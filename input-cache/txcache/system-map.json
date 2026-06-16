@@ -1,84 +1,137 @@
 {
-  "systems" : [
-    {
-      "system" : "http://example.org/some-id-type-system",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://example.org/some-system",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://example.org/system/code/questions",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://example.org/system/code/sections",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://hl7.org/fhir/fhir-types",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://loinc.org",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
-    },
-    {
-      "system" : "http://not-a-known-code-system",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://not-a-known-code-system|2.36",
-      "authoritative" : [],
-      "candidates" : []
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
-    },
-    {
-      "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
-      "authoritative" : ["http://tx.fhir.org/r4"],
-      "candidates" : ["https://tx.ontoserver.csiro.au/fhir"]
-    },
-    {
-      "system" : "http://unitsofmeasure.org",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
-    },
-    {
-      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4"]
-    },
-    {
-      "system" : "urn:ietf:bcp:13",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4"]
-    },
-    {
-      "system" : "urn:ietf:bcp:47",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4", "https://tx.ontoserver.csiro.au/fhir"]
-    },
-    {
-      "system" : "urn:iso:std:iso:3166",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4"]
-    },
-    {
-      "system" : "urn:iso:std:iso:3166:-2",
-      "authoritative" : [],
-      "candidates" : ["http://tx.fhir.org/r4"]
-    }
-  ]
+  "systems" : [{
+    "system" : "http://example.org/some-id-type-system",
+    "url" : "http://example.org/some-id-type-system",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/some-system",
+    "url" : "http://example.org/some-system",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/system/code/questions",
+    "url" : "http://example.org/system/code/questions",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/system/code/sections",
+    "url" : "http://example.org/system/code/sections",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://loinc.org",
+    "url" : "http://loinc.org",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.hl7chile.cl/r4"]
+  },
+  {
+    "system" : "http://not-a-known-code-system|2.36",
+    "url" : "http://not-a-known-code-system|2.36",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/sct",
+    "url" : "http://snomed.info/sct",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://smt.esante.gouv.fr/fhir",
+    "https://apps.health.belgium.be/ontoserver/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "url" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
+    "url" : "http://terminology.hl7.org/CodeSystem/definition-use",
+    "authoritative" : ["http://tx.fhir.org/r4"],
+    "candidates" : ["https://tx.ontoserver.csiro.au/fhir",
+    "https://tx.fhir.ch/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "http://unitsofmeasure.org",
+    "url" : "http://unitsofmeasure.org",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.hl7chile.cl/r4"]
+  },
+  {
+    "system" : "urn:ietf:bcp:13",
+    "url" : "urn:ietf:bcp:13",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.hl7chile.cl/r4"]
+  },
+  {
+    "system" : "urn:ietf:bcp:47",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.hl7chile.cl/r4",
+    "https://tx-nordics.fhir.org/fhir/r4"]
+  }]
 }
