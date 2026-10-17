@@ -1,29 +1,5 @@
 {
   "systems" : [{
-    "system" : "http://example.org/some-id-type-system",
-    "url" : "http://example.org/some-id-type-system",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
-    "system" : "http://example.org/some-system",
-    "url" : "http://example.org/some-system",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
-    "system" : "http://example.org/system/code/questions",
-    "url" : "http://example.org/system/code/questions",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
-    "system" : "http://example.org/system/code/sections",
-    "url" : "http://example.org/system/code/sections",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
     "system" : "http://loinc.org",
     "url" : "http://loinc.org",
     "authoritative" : [],
@@ -36,10 +12,68 @@
     "https://tx.hl7chile.cl/r4"]
   },
   {
-    "system" : "http://not-a-known-code-system|2.36",
-    "url" : "http://not-a-known-code-system|2.36",
+    "system" : "http://loinc.org in de",
+    "url" : "http://loinc.org",
+    "language" : "de",
     "authoritative" : [],
-    "candidates" : []
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
+  },
+  {
+    "system" : "http://loinc.org in en",
+    "url" : "http://loinc.org",
+    "language" : "en",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
+  },
+  {
+    "system" : "http://loinc.org in en, en-US",
+    "url" : "http://loinc.org",
+    "language" : "en, en-US",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
+  },
+  {
+    "system" : "http://loinc.org in fr",
+    "url" : "http://loinc.org",
+    "language" : "fr",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
   },
   {
     "system" : "http://snomed.info/sct",
@@ -57,18 +91,26 @@
     "https://tx-nordics.fhir.org/fhir/r4"]
   },
   {
-    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
-    "url" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
-    "authoritative" : [],
-    "candidates" : []
-  },
-  {
     "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
     "url" : "http://terminology.hl7.org/CodeSystem/definition-use",
     "authoritative" : ["http://tx.fhir.org/r4"],
     "candidates" : ["https://tx.ontoserver.csiro.au/fhir",
     "https://tx.fhir.ch/r4",
     "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/definition-use in en",
+    "url" : "http://terminology.hl7.org/CodeSystem/definition-use",
+    "language" : "en",
+    "authoritative" : ["http://tx.fhir.org/r4"],
+    "candidates" : ["https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
   },
   {
     "system" : "http://unitsofmeasure.org",
@@ -83,12 +125,67 @@
     "https://tx-nordics.fhir.org/fhir/r4"]
   },
   {
+    "system" : "http://unitsofmeasure.org in de",
+    "url" : "http://unitsofmeasure.org",
+    "language" : "de",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4",
+    "https://nzhts.digital.health.nz/fhir"]
+  },
+  {
+    "system" : "http://unitsofmeasure.org in en",
+    "url" : "http://unitsofmeasure.org",
+    "language" : "en",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4",
+    "https://nzhts.digital.health.nz/fhir"]
+  },
+  {
+    "system" : "http://unitsofmeasure.org in fr",
+    "url" : "http://unitsofmeasure.org",
+    "language" : "fr",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://tx.ontoserver.csiro.au/fhir",
+    "https://terminologystandardsservice.ca/tx/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4",
+    "https://nzhts.digital.health.nz/fhir"]
+  },
+  {
     "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
     "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
     "authoritative" : [],
     "candidates" : ["http://tx.fhir.org/r4",
     "http://tx.hl7europe.eu/r4",
     "https://tx.hl7chile.cl/r4"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm in en",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "language" : "en",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4", "https://tx.healthall.co.kr/fhir/r4"]
   },
   {
     "system" : "urn:ietf:bcp:13",
@@ -125,6 +222,21 @@
     "https://tx-nordics.fhir.org/fhir/r4"]
   },
   {
+    "system" : "urn:iso:std:iso:3166 in en",
+    "url" : "urn:iso:std:iso:3166",
+    "language" : "en",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "https://178.104.103.200.sslip.io/tx/r4",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.ch/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4",
+    "https://nzhts.digital.health.nz/fhir"]
+  },
+  {
     "system" : "urn:iso:std:iso:3166:-2",
     "url" : "urn:iso:std:iso:3166:-2",
     "authoritative" : [],
@@ -133,5 +245,17 @@
     "http://tx.hl7europe.eu/r4",
     "https://tx.hl7chile.cl/r4",
     "https://tx-nordics.fhir.org/fhir/r4"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2 in en",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "language" : "en",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r4",
+    "https://tx.hl7.org.au/fhir",
+    "http://tx.hl7europe.eu/r4",
+    "https://tx.fhir.de/fhir",
+    "https://tx.hl7.cz/r4",
+    "https://tx.healthall.co.kr/fhir/r4"]
   }]
 }
