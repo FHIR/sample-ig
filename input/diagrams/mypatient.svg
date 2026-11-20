@@ -57,7 +57,7 @@
        fill="#000000"
        class="diagram-class-linkage"><a
          id="n22"
-         xlink:href="null#Patient.extension"><title
+         xlink:href="StructureDefinition-mypatient-definitions.html#Patient.extension"><title
    id="title1">An Extension</title>extension
       </a></text>
   </g>
@@ -89,7 +89,7 @@
        fill="black"
        class="diagram-class-linkage"><a
          id="n23"
-         xlink:href="null#Patient.extension:myExtension"><title
+         xlink:href="StructureDefinition-mypatient-definitions.html#Patient.extension:myExtension"><title
            id="title2">An Extension</title></a></text>
   </g>
   <text
@@ -125,7 +125,7 @@
        fill="black"
        class="diagram-class-linkage"><a
          id="n24"
-         xlink:href="null#Patient.name"><title
+         xlink:href="StructureDefinition-mypatient-definitions.html#Patient.name"><title
    id="title3">A name associated with the individual</title>name
       </a></text>
   </g>
@@ -157,7 +157,7 @@
        fill="black"
        class="diagram-class-linkage"><a
          id="n25"
-         xlink:href="null#Patient.name:CurrentOfficial"><title
+         xlink:href="StructureDefinition-mypatient-definitions.html#Patient.name:CurrentOfficial"><title
            id="title4">A name associated with the individual</title></a></text>
   </g>
   <text
@@ -354,7 +354,7 @@ MyPatientName (      <a
       <xhtml:div
          class="diagram-class-detail"><xhtml:a
    style="text-decoration: none;"
-   href="null#Patient.name:CurrentOfficial.use"
+   href="StructureDefinition-mypatient-definitions.html#Patient.name:CurrentOfficial.use"
    title="Identifies the purpose for this name (this element modifies the meaning of other elements, and must be supported)">use</xhtml:a>
 
  :         <xhtml:a
@@ -384,7 +384,7 @@ MyPatientName (      <a
       <xhtml:div
          class="diagram-class-detail"><xhtml:a
    style="text-decoration: none;"
-   href="null#Patient.name:CurrentOfficial.period"
+   href="StructureDefinition-mypatient-definitions.html#Patient.name:CurrentOfficial.period"
    title="Indicates the period of time when this name was valid for the named person">period</xhtml:a>
 
  :         <xhtml:a

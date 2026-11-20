@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="mypatient"/>
+  <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/mypatient"/>
+  <name value="MyPatientName"/>
+  <title value="My Favorite Patient Profile"/>
+  <status value="draft"/>
+  <date value="2019-09-01"/>
+  <description value="My patient description"/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="some-mapping"/>
+    <uri value="http://example.org/some-mapping"/>
+    <name value="Some mapping"/>
+    <comment value="Example mapping to a hypothetical external model"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Patient"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Patient">
+      <path value="Patient"/>
+      <short value="My Favorite Patient Profile"/>
+      <definition value="This will be the description for the patient profile within the profile page"/>
+      <alias value="Form Data"/>
+      <mapping>
+        <identity value="some-mapping"/>
+        <map value="SomeClass"/>
+      </mapping>
+    </element>
+    <element id="Patient.extension:myExtension">
+      <path value="Patient.extension"/>
+      <sliceName value="myExtension"/>
+      <short value="Context-specific Extension Name"/>
+      <definition value="Context-specific Extension Description"/>
+      <comment value="Add on these extension usage notes"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://somewhere.org/fhir/uv/myig/StructureDefinition/ext-myExtension"/>
+      </type>
+      <mustSupport value="false"/>
+      <mapping>
+        <identity value="some-mapping"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="use"/>
+        </discriminator>
+        <discriminator>
+          <type value="exists"/>
+          <path value="period.end"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="1"/>
+      <mapping>
+        <identity value="some-mapping"/>
+        <map value="SomeElement"/>
+      </mapping>
+    </element>
+    <element id="Patient.name:CurrentOfficial">
+      <path value="Patient.name"/>
+      <sliceName value="CurrentOfficial"/>
+      <definition value="CurrentOfficial is an official name for the patient that does not have an end date specified."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name:CurrentOfficial.use">
+      <path value="Patient.name.use"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Patient.name:CurrentOfficial.period.end">
+      <path value="Patient.name.period.end"/>
+      <max value="0"/>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>
