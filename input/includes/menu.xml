@@ -2,7 +2,7 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">MyIg Background<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">MyIg Background<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -12,7 +12,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Specification<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -25,7 +25,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifacts<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Artifacts<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
@@ -41,7 +41,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Support<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">

@@ -8,9 +8,6 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/> 
   </extension>
-<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
-    <valueString value="resources-spreadsheet.xml"/>
-  </extension>-->
   <url value="http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.2.0"/>

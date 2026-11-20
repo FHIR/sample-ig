@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="mypractitioner"/>
+  <url value="http://somewhere.org/fhir/uv/myig/StructureDefinition/mypractitioner"/>
+  <name value="MyPractitionerName"/>
+  <title value="Some Practitioner profile"/>
+  <status value="draft"/>
+  <date value="2019-09-01"/>
+  <description value="My practitioner description"/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="some-mapping"/>
+    <uri value="http://example.org/some-mapping"/>
+    <name value="Some mapping"/>
+    <comment value="Example mapping to a hypothetical external model"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Practitioner"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Practitioner">
+      <path value="Practitioner"/>
+      <short value="Some Practitioner profile"/>
+      <definition value="Description for the profile page"/>
+      <alias value="Form Data"/>
+      <mapping>
+        <identity value="some-mapping"/>
+        <map value="SomeClass"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.name">
+      <path value="Practitioner.name"/>
+      <max value="0"/>
+      <mapping>
+        <identity value="some-mapping"/>
+        <map value="SomeElement"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
