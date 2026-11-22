@@ -1,4 +1,4 @@
-library example version '1.0.0'
+library example version '0.2.0'
 
 using FHIR version '4.0.1'
 
